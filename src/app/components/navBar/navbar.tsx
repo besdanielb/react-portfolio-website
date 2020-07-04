@@ -10,11 +10,13 @@ export default function NavBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event: any) => {
-
         setAnchorEl(event.currentTarget);
-
-
     };
+
+    const changeLanguage = (event: any) => {
+        setAnchorEl(null);
+    };
+
 
     const handleClose = () => {
         setAnchorEl(null);
@@ -40,7 +42,7 @@ export default function NavBar() {
                         }
                     }}
                     onClose={handleClose}>
-                    <MenuItem onClick={handleClick}>Portugês</MenuItem>
+                    <MenuItem onClick={changeLanguage}>Portugês</MenuItem>
                     <MenuItem onClick={handleClick}>Inglês</MenuItem>
                 </Menu>
             </div>
