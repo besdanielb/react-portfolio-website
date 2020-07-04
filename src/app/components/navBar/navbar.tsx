@@ -17,7 +17,6 @@ export default function NavBar() {
         setAnchorEl(null);
     };
 
-
     const handleClose = () => {
         setAnchorEl(null);
     };
@@ -43,7 +42,7 @@ export default function NavBar() {
                     }}
                     onClose={handleClose}>
                     <MenuItem onClick={changeLanguage}>Portugês</MenuItem>
-                    <MenuItem onClick={handleClick}>Inglês</MenuItem>
+                    <MenuItem onClick={changeLanguage}>Inglês</MenuItem>
                 </Menu>
             </div>
         </div>
