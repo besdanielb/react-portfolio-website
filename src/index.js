@@ -4,11 +4,10 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import App from './app/App';
 import 'fontsource-roboto';
+import './i18n';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App></App>
-  </React.StrictMode>,
+    <App></App>,
   document.getElementById('root')
 );
 
