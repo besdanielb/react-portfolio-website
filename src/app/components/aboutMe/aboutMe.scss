@@ -1,4 +1,4 @@
-section#aboutMe{
+section#aboutMe {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,13 +7,99 @@ section#aboutMe{
     width: 100%;
     height: 100vh;
     scroll-snap-align: center;
+    background: url("../../images/headphones.jpg") no-repeat center center/cover;
 
     h1 {
-        color: #E0E0E0;
-        font-size: 3rem;
+        color: #e0e0e0;
+        font-size: 3vw;
     }
 
     p {
-        font-size: 1.4rem;
+        margin: 0;
+        font-size: 1.4vw;
+        color: #e0e0e0;
+    }
+
+    .main-paper {
+        height: 70%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+
+        &__content {
+            display: flex;
+        }
+
+        &__description {
+            flex: 1;
+            text-align: justify;
+            padding-right: 3rem;
+            align-self: center;
+        }
+
+        .border {
+            border-left: 1px solid rgba(204, 204, 204, 0.3);
+            margin-left: 3rem;
+            margin-right: 3rem;
+        }
+
+        &__image-container {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            padding-left: 3rem;
+        }
+
+        &__image {
+            max-width: 70%;
+            height: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    section#aboutMe{
+        height: 50vh;
+
+        .main-paper {
+            height: 70%;
+            background: rgba(0, 0, 0, 0.6);
+    
+            &__content {
+                height: 20vh;
+            }
+    
+            &__description {
+                text-align: justify;
+                padding-right: 1rem;
+                
+            }
+
+            h1 {
+                font-size: 5vw;
+            }
+        
+            p {
+                font-size: 2.2vw;
+            }
+    
+            .border {
+                border-left: 1px solid rgba(204, 204, 204, 0.3);
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+    
+            &__image-container {
+                justify-content: center;
+                padding-left: 1rem;
+            }
+    
+            &__image {
+                max-width: 100%;
+                height: auto;
+                height: 20vh;
+                align-self: center;
+            }
+        }
     }
 }
