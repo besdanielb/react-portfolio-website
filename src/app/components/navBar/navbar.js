@@ -115,8 +115,7 @@ function NavBar({ t, window }) {
                         }}
                         ModalProps={{
                             keepMounted: true, // Better open performance on mobile.
-                        }}
-                    >
+                        }}>
                         <div>
                             <div className={classes.toolbar} />
                             <Divider />

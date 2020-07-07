@@ -3,7 +3,9 @@
     "navBar.aboutMe": "Sobre mim",
     "navBar.contacts": "Contactos",
     "navBar.portfolio": "Portfólio",
-    "home.description": "Compositora",
+    "home.introduction": "Olá, chamo-me",
+    "home.name":"Olívia Silva",
+    "home.description": "Compositora inspirada em compor música todos os dias!",
     "aboutMe.title": "Sobre mim",
     "aboutMe.description": "Nasci em 1996, no Porto. Sou atualmente licenciada em composição pela ESMAE,\n e estou de momento no mestrado. Componho regularmente para vários grupos de música de câmara e solistas. \n O meu foco principal neste momento é a criação de música eletrónica e a interação com músicos e bailarinos em tempo real."
 }

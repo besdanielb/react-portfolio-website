@@ -9,25 +9,4 @@ section#home {
     background: url('../../images/musicBook.jpg') no-repeat center center/cover;
     scroll-snap-align: center;
     text-shadow: 1px 1px 15px black;
-
-    h1 {
-        color: #E0E0E0;
-        font-size: 5vw;
-    }
-
-    p {
-        font-size: 2vw;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    section#home {
-        h1 {
-            font-size: 8vw;
-        }
-    
-        p {
-            font-size: 4vw;
-        }
-    }
 }

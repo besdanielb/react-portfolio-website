@@ -9,31 +9,35 @@ section#aboutMe {
     scroll-snap-align: center;
     background: url("../../images/headphones.jpg") no-repeat center center/cover;
 
-    h1 {
+    .title {
         color: #e0e0e0;
-        font-size: 3vw;
     }
 
     p {
-        margin: 0;
-        font-size: 1.4vw;
+        margin-right: 2vw;
         color: #e0e0e0;
     }
 
     .main-paper {
-        height: 70%;
+        height: 70vh;
         width: 100%;
         background: rgba(0, 0, 0, 0.6);
 
         &__content {
-            display: flex;
+            height: 70vh;
         }
 
-        &__description {
-            flex: 1;
+        .icons {
+            color: white;
+
+            & > * {
+                color: white;
+                margin-right: 2px;
+            }
+        }
+
+        .description {
             text-align: justify;
-            padding-right: 3rem;
-            align-self: center;
         }
 
         .border {
@@ -42,16 +46,8 @@ section#aboutMe {
             margin-right: 3rem;
         }
 
-        &__image-container {
-            display: flex;
-            flex: 1;
-            justify-content: flex-end;
-            padding-left: 3rem;
-        }
-
         &__image {
-            max-width: 70%;
-            height: auto;
+            max-width: 50%;
             border-radius: 4%;
         }
     }
@@ -66,40 +62,14 @@ section#aboutMe {
             height: 70%;
             background: rgba(0, 0, 0, 0.6);
     
-            &__content {
-                height: 20vh;
-            }
-    
             &__description {
-                text-align: justify;
                 padding-right: 1rem;
-                
-            }
-
-            h1 {
-                font-size: 5vw;
-            }
-        
-            p {
-                font-size: 2.2vw;
             }
     
             .border {
                 border-left: 1px solid rgba(204, 204, 204, 0.3);
                 margin-left: 1rem;
                 margin-right: 1rem;
-            }
-    
-            &__image-container {
-                justify-content: center;
-                padding-left: 1rem;
-            }
-    
-            &__image {
-                max-width: 100%;
-                height: auto;
-                height: 20vh;
-                align-self: center;
             }
         }
     }
