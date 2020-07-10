@@ -11,15 +11,15 @@
 
 .MuiButton-root {
     color: white !important;
+
+    &:hover{
+        color: skyblue !important;
+    }
 }
 
 .MuiMenu-paper {
     top: 2.5rem !important;
     background-color: rgba(255, 255, 255, 0.4) !important;
-}
-
-.MuiButton-label:hover {
-    color: skyblue !important;
 }
 
 .MuiListItemIcon-root {

@@ -13,9 +13,9 @@ section#aboutMe {
         color: #e0e0e0;
     }
 
-    p {
+    .p {
         margin-right: 2vw;
-        color: #e0e0e0;
+        color: #e0e0e0 !important;
     }
 
     .main-paper {
@@ -25,14 +25,27 @@ section#aboutMe {
 
         &__content {
             height: 70vh;
+            max-height: 70vh;
         }
 
         .icons {
-            color: white;
-
             & > * {
                 color: white;
                 margin-right: 2px;
+                &:hover{
+                    &:nth-child(1) {
+                        color: rgb(56, 125, 255);                        
+                    }
+                    &:nth-child(2) {
+                        color: rgb(193,53,132);
+                    }
+                    &:nth-child(3) {
+                        color: rgb(56, 155, 255);
+                    }
+                    &:nth-child(4) {
+                        color: rgb(255,0,0);
+                    }       
+                }
             }
         }
 
@@ -51,26 +64,44 @@ section#aboutMe {
             border-radius: 4%;
         }
     }
+    .MuiButton-root {
+        color: white !important;
+        border-color: white;
+    }
+
+    .MuiButton-label:hover {
+        color: skyblue !important;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-
-    section#aboutMe{
+    section#aboutMe {
         height: 50vh;
+        
 
         .main-paper {
-            height: 70%;
-            background: rgba(0, 0, 0, 0.6);
-    
-            &__description {
-                padding-right: 1rem;
+            height: 35vh;
+            max-height: 35vh;
+            &__content {
+                height: 25vh;
+                max-height: 25vh;
             }
-    
-            .border {
-                border-left: 1px solid rgba(204, 204, 204, 0.3);
-                margin-left: 1rem;
-                margin-right: 1rem;
+
+            &__image {
+                max-width: 70%;
+            }
+
+            .description {
+                text-align: left;
             }
         }
     }
+    .MuiTypography-h4 {
+        font-size: 4vw !important;
+        text-align: justify !important;
+    } 
+
+    .MuiTypography-h6 {
+        font-size: 2.5vw !important;
+    } 
 }

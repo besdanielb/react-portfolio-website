@@ -7,5 +7,7 @@
     "home.name":"Olívia Silva",
     "home.description": "Music composer impired to make music everyday!",
     "aboutMe.title": "About Me",
-    "aboutMe.description": "Nasci em 1996, no Porto. Sou atualmente licenciada em composição pela ESMAE,\n e estou de momento no mestrado. Componho regularmente para vários grupos de música de câmara e solistas. \n O meu foco principal neste momento é a criação de música eletrónica e a interação com músicos e bailarinos em tempo real."
+    "aboutMe.description.p1": "Nasci em 1996, no Porto. Sou atualmente licenciada em composição pela ESMAE,\n e estou de momento no mestrado. Componho regularmente para vários grupos de música de câmara e solistas.",
+    "aboutMe.description.p2":"O meu foco principal neste momento é a criação de música eletrónica e a interação com músicos e bailarinos em tempo real. Random text 123 exemplo não sei o que escrever, e tu sabes?",
+    "aboutMe.downloadCV":"Download CV"
 }

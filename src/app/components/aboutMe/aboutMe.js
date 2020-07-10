@@ -6,42 +6,63 @@ import image from '../../images/looking-at-computer.png'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import { IconButton, Typography } from '@material-ui/core';
+import { IconButton, Typography, Button } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, MuiThemeProvider, responsiveFontSizes } from '@material-ui/core/styles';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
+        display: 'flex',
+        justifyContent: 'flex-start',
+        flexWrap: 'wrap',
+        flexDirection:"column",
+        '& > *': {
+            margin: theme.spacing(0.5),
+        },
     },
-    paper: {
-        padding: theme.spacing(3),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
+    chip: {
+        color:"white",
+        borderColor:"white",
+    }
 }));
 
+let theme = createMuiTheme();
+theme = responsiveFontSizes(theme);
+
 const AboutMe = ({ t }) => {
+    const classes = useStyles();
 
     return (
         <section className="aboutMe" id="aboutMe" name="aboutMe" >
             <Paper className="main-paper" elevation={24}>
                 <Grid container spacing={2} className="main-paper__content">
                     <Grid item xs={12} container justify="center" alignItems="center">
-                        <Typography variant="h4" className="title">{t('aboutMe.title')}</Typography>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant="h4" className="title">{t('aboutMe.title')}</Typography>
+                        </ThemeProvider>
                     </Grid>
                     <Grid item xs container direction="column" justify="center" alignItems="center" >
-                        <Grid item xs>
+                        <Grid item xs style={{textAlign:'center'}}>
                             <img className="main-paper__image" alt="looking at computer" src={image}></img>
                         </Grid>
                         <Grid item xs className="icons">
-                            <IconButton onClick={() => {window.location.href='http://www.facebook.com'}}><FacebookIcon></FacebookIcon></IconButton>
-                            <IconButton onClick={() => {window.location.href='http://www.instagram.com'}}><InstagramIcon></InstagramIcon></IconButton>
-                            <IconButton onClick={() => {window.location.href='http://www.linkedin.com'}}><LinkedInIcon></LinkedInIcon></IconButton>
+                            <IconButton onClick={() => { window.location.href = 'http://www.facebook.com' }}><FacebookIcon></FacebookIcon></IconButton>
+                            <IconButton onClick={() => { window.location.href = 'http://www.instagram.com' }}><InstagramIcon></InstagramIcon></IconButton>
+                            <IconButton onClick={() => { window.location.href = 'http://www.linkedin.com' }}><LinkedInIcon></LinkedInIcon></IconButton>
+                            <IconButton onClick={() => { window.location.href = 'http://www.youtube.com' }}><YouTubeIcon></YouTubeIcon></IconButton>
                         </Grid>
                     </Grid>
-                    <Grid item xs container className="description">
-                        <Typography className="p"> {t('aboutMe.description')}</Typography>
+                    <Grid item xs container wrap="nowrap" direction="column" className="description">
+                        <Grid item xs>
+                            <ThemeProvider theme={theme}>
+                                <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p1')}</Typography>
+                                <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p2')}</Typography>
+                            </ThemeProvider>
+                            <Button variant="outlined" style={{display:'flex', alignSelf:'flex-start', marginTop:"15px"}}> {t('aboutMe.downloadCV')}</Button>
+                        </Grid>
+                        
                     </Grid>
                 </Grid>
             </Paper>
