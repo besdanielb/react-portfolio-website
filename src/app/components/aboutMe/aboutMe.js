@@ -2,37 +2,19 @@ import React from 'react'
 import './aboutMe.scss'
 import { withNamespaces } from 'react-i18next';
 import Paper from '@material-ui/core/Paper'
-import image from '../../images/looking-at-computer.png'
+import image from '../../images/looking-at-computer.webp'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import { IconButton, Typography, Button } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { createMuiTheme, MuiThemeProvider, responsiveFontSizes } from '@material-ui/core/styles';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        justifyContent: 'flex-start',
-        flexWrap: 'wrap',
-        flexDirection:"column",
-        '& > *': {
-            margin: theme.spacing(0.5),
-        },
-    },
-    chip: {
-        color:"white",
-        borderColor:"white",
-    }
-}));
+import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme);
 
 const AboutMe = ({ t }) => {
-    const classes = useStyles();
 
     return (
         <section className="aboutMe" id="aboutMe" name="aboutMe" >

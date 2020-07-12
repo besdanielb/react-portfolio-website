@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import App from './app/App';
-import 'fontsource-roboto';
 import './i18n';
 
 ReactDOM.render(

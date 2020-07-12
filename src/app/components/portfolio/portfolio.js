@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './portfolio.scss'
 import { withNamespaces } from 'react-i18next';
-import { Paper, Grid, Card, Container } from '@material-ui/core';
+import { Paper, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import PortfolioCard from './card/portfolio-card';
 
@@ -20,28 +20,28 @@ const Portfolio = ({ t }) => {
     const propsCard1 = {
         title: "title example",
         date: "September 14, 2014",
-        imagePath: require("../../images/headphones.jpg"),
+        imagePath: require("../../images/headphones-large.webp"),
         imageTitle: "Lindo exemplo"
     }
 
     const propsCard2 = {
         title: "title example",
         date: "September 14, 2014",
-        imagePath: require("../../images/portfolio-option2.jpg"),
+        imagePath: require("../../images/portfolio-3-large.webp"),
         imageTitle: "Lindo exemplo"
     }
 
     const propsCard3 = {
         title: "title example",
         date: "September 14, 2014",
-        imagePath: require("../../images/portfolio-option4.jpg"),
+        imagePath: require("../../images/portfolio-view-large.webp"),
         imageTitle: "Lindo exemplo"
     }
 
     const propsCard4 = {
         title: "title example",
         date: "September 14, 2014",
-        imagePath: require("../../images/portfolio-view.jpg"),
+        imagePath: require("../../images/music-book-large.webp"),
         imageTitle: "Lindo exemplo"
     }
 

@@ -1,22 +1,29 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import './App.css';
 import NavBar from './components/navBar/navbar';
-import AboutMe from './components/aboutMe/aboutMe';
-import Contacts from './components/contacts/contacts';
-import Portfolio from './components/portfolio/portfolio';
 import Home from './components/home/home';
 import '../i18n';
 
-function App({ t }) {
-  return (
-    <div className="container">
-      <Home></Home>
+const AboutMe = lazy(() => import('./components/aboutMe/aboutMe'));
+const Contacts = lazy(() => import('./components/contacts/contacts'));
+const Portfolio = lazy(() => import('./components/portfolio/portfolio'));
+
+const App = ({ t }) => (
+  <div className="container">
+    <Home></Home>
+    <Suspense fallback={<div></div>}>
       <NavBar></NavBar>
+    </Suspense>
+    <Suspense fallback={<div></div>}>
       <AboutMe></AboutMe>
+    </Suspense>
+    <Suspense fallback={<div></div>}>
       <Portfolio></Portfolio>
+    </Suspense>
+    <Suspense fallback={<div></div>}>
       <Contacts></Contacts>
-    </div>
-  );
-}
+    </Suspense>
+  </div>
+);
 
 export default App;

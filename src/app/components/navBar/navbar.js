@@ -20,7 +20,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MailIcon from '@material-ui/icons/Mail';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 const drawerWidth = 220;
 
@@ -53,8 +53,16 @@ function NavBar({ t, window }) {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const theme = useTheme();
 
+    const getCurrentLanguageLabel = () => {
+        if(i18next.language === 'en') {
+            return 'English';
+        }else if( i18next.language === 'pt') {
+            return 'Português';
+        }
+    }
+
+    const currentLanguageLabel = getCurrentLanguageLabel();
     const container = window !== undefined ? () => window().document.body : undefined;
 
 
@@ -65,7 +73,8 @@ function NavBar({ t, window }) {
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-    };
+        getCurrentLanguageLabel();
+    };    
 
     const handleClose = () => {
         setAnchorEl(null);
@@ -82,7 +91,7 @@ function NavBar({ t, window }) {
     return (
         <div className={classes.root}>
             <div className="navBar">
-                <Hidden smUp>
+                <Hidden mdUp>
                     <MenuIcon className="menuIcon" onClick={handleDrawerToggle}></MenuIcon>
                 </Hidden>
                 <Hidden smDown>
@@ -91,7 +100,7 @@ function NavBar({ t, window }) {
                     <Button href="#portfolio">{t('navBar.portfolio')}</Button>
                     <Button href="#contacts">{t('navBar.contacts')}</Button>
                 </Hidden>
-                <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}><TranslateOutlinedIcon></TranslateOutlinedIcon>{i18next.language}<ExpandMoreOutlinedIcon></ExpandMoreOutlinedIcon></Button>
+                <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}><TranslateOutlinedIcon></TranslateOutlinedIcon>{currentLanguageLabel}<ExpandMoreOutlinedIcon></ExpandMoreOutlinedIcon></Button>
                 <Menu
                     id="simple-menu"
                     anchorEl={anchorEl}
