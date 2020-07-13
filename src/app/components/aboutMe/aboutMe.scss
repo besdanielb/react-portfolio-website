@@ -32,19 +32,19 @@ section#aboutMe {
             & > * {
                 color: white;
                 margin-right: 2px;
-                &:hover{
+                &:hover {
                     &:nth-child(1) {
-                        color: rgb(56, 125, 255);                        
+                        color: rgb(56, 125, 255);
                     }
                     &:nth-child(2) {
-                        color: rgb(193,53,132);
+                        color: rgb(193, 53, 132);
                     }
                     &:nth-child(3) {
                         color: rgb(56, 155, 255);
                     }
                     &:nth-child(4) {
-                        color: rgb(255,0,0);
-                    }       
+                        color: rgb(255, 0, 0);
+                    }
                 }
             }
         }
@@ -73,8 +73,6 @@ section#aboutMe {
             border-color: skyblue;
         }
     }
-
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -101,9 +99,9 @@ section#aboutMe {
     .MuiTypography-h4 {
         font-size: 4vw !important;
         text-align: justify !important;
-    } 
+    }
 
     .MuiTypography-h6 {
         font-size: 2.5vw !important;
-    } 
+    }
 }

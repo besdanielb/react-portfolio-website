@@ -30,17 +30,17 @@ section#portfolio {
         margin-top: 2%;
     }
 
-    .MuiCardContent-root{
-        transition: background-color .2s linear, border-radius 1s ease-in 1s;
+    .MuiCardContent-root {
+        transition: background-color 0.2s linear, border-radius 1s ease-in 1s;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
             background-color: rgba(255, 255, 255, 0.2);
 
             .MuiTypography-root {
                 color: skyblue !important;
             }
-         }
+        }
     }
 }
 
