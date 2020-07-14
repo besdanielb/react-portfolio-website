@@ -41,7 +41,8 @@ const useStyles = makeStyles(() => ({ root: { display: 'flex',
     '&:hover fieldset': { borderColor: 'skyblue' },
     '&.Mui-focused fieldset': { borderColor: 'white' } } } }))
 
-const Contacts = ({ t }) => {
+const Contacts = (props) => {
+  const { t } = props
   const classes = useStyles()
   const { register, handleSubmit } = useForm()
 
@@ -120,35 +121,36 @@ const Contacts = ({ t }) => {
                 />
               </Grid>
               <Grid item xs={12} md={12}>
-                <Button variant="outlined" name="submit" type="submit">
-                  {' '}
+                <Button variant="outlined" aria-label="Send email" name="submit" type="submit">
                   {t('contacts.sendEmail')}
-                  {' '}
                   <SendIcon className="send-icon" />
                 </Button>
               </Grid>
             </Grid>
-            <Grid item container xs={12} sm={12} md={6} spacing={3} justify="center" className="my-info">
-              <Grid item xs={6} align="left" className="my-info__items">
+            <Grid item container xs={12} sm={12} md={6} spacing={3} justify="center" align="center" className="my-info">
+              <Grid item xs align="center" className="my-info__items">
                 <ThemeProvider theme={theme}>
-                  <Typography variant="h3" className="my-info__items--title">{t('contacts.personal-info.title')}</Typography>
-                  <Typography variant="h5" className="my-info__items--email">
-                    <EmailIcon className="contact-icon" fontSize="small" />
-                    {t('contacts.personal-email')}
-                  </Typography>
-                  <Typography variant="h5" className="my-info__items--phone">
-                    <PhoneIcon className="contact-icon" fontSize="small" />
-                    {t('contacts.personal-number')}
-                  </Typography>
-                  <Typography variant="h5" className="my-info__items--location">
-                    <LocationCityIcon className="contact-icon" fontSize="small" />
-                    {t('contacts.location')}
-                  </Typography>
+                  <div className="my-info__items--content">
+                    <Typography variant="h3" className="my-info__items--title">{t('contacts.personal-info.title')}</Typography>
+                    <Typography variant="h5" paragraph className="my-info__items--content--email">
+                      <EmailIcon className="contact-icon" fontSize="small" />
+                      {t('contacts.personal-email')}
+                    </Typography>
+                    <Typography variant="h5" paragraph className="my-info__items--content--phone">
+                      <PhoneIcon className="contact-icon" fontSize="small" />
+                      {t('contacts.personal-number')}
+                    </Typography>
+                    <Typography variant="h5" paragraph className="my-info__items--content--location">
+                      <LocationCityIcon className="contact-icon" fontSize="small" />
+                      {t('contacts.location')}
+                    </Typography>
+                  </div>
+                  <div className="division" />
                   <div className="link-icons">
-                    <IconButton target="_blank" href="http://www.facebook.com"><FacebookIcon /></IconButton>
-                    <IconButton target="_blank" href="http://www.instagram.com"><InstagramIcon /></IconButton>
-                    <IconButton target="_blank" href="http://www.linkedin.com"><LinkedInIcon /></IconButton>
-                    <IconButton target="_blank" href="http://www.youtube.com"><YouTubeIcon /></IconButton>
+                    <IconButton target="_blank" rel="noopener" href="http://www.facebook.com"><FacebookIcon /></IconButton>
+                    <IconButton target="_blank" rel="noopener" href="http://www.instagram.com"><InstagramIcon /></IconButton>
+                    <IconButton target="_blank" rel="noopener" href="http://www.linkedin.com"><LinkedInIcon /></IconButton>
+                    <IconButton target="_blank" rel="noopener" href="http://www.youtube.com"><YouTubeIcon /></IconButton>
                   </div>
                 </ThemeProvider>
               </Grid>

@@ -8,14 +8,17 @@ import { createMuiTheme, MuiThemeProvider, responsiveFontSizes } from '@material
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
 
-const Home = ({ t }) => (
-  <section id="home">
-    <MuiThemeProvider theme={theme}>
-      <Typography variant="h4">{t('home.introduction')}</Typography>
-      <Typography variant="h1">{t('home.name')}</Typography>
-      <Typography variant="h6">{t('home.description')}</Typography>
-    </MuiThemeProvider>
-  </section>
-)
+const Home = (props) => {
+  const { t } = props
+  return (
+    <section id="home">
+      <MuiThemeProvider theme={theme}>
+        <Typography variant="h4">{t('home.introduction')}</Typography>
+        <Typography variant="h1">{t('home.name')}</Typography>
+        <Typography variant="h6">{t('home.description')}</Typography>
+      </MuiThemeProvider>
+    </section>
+  )
+}
 
 export default withNamespaces()(Home)

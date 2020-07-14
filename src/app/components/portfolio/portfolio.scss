@@ -1,14 +1,14 @@
 section#portfolio {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     scroll-snap-align: center;
     background: url("../../images/portfolio-3-large.webp") no-repeat center center/cover;
 
     .paper {
         height: 100vh;
-        width: 100%;
+        width: 100vw;
         display: flex;
         align-items: center;
     }

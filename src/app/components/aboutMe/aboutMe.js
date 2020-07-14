@@ -15,41 +15,43 @@ import image from '../../images/looking-at-computer.webp'
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
 
-const AboutMe = ({ t }) => (
-  <section className="aboutMe" id="aboutMe" name="aboutMe">
-    <Paper className="main-paper" elevation={24}>
-      <Grid container spacing={2} className="main-paper__content">
-        <Grid item xs={12} container justify="center" alignItems="center">
-          <ThemeProvider theme={theme}>
-            <Typography variant="h4" className="title">{t('aboutMe.title')}</Typography>
-          </ThemeProvider>
-        </Grid>
-        <Grid item xs container direction="column" justify="center" alignItems="center">
-          <Grid item xs style={{ textAlign: 'center' }}>
-            <img className="main-paper__image" alt="looking at computer" src={image} />
-          </Grid>
-          <Grid item xs className="icons">
-            <IconButton onClick={() => { window.location.href = 'http://www.facebook.com' }}><FacebookIcon /></IconButton>
-            <IconButton onClick={() => { window.location.href = 'http://www.instagram.com' }}><InstagramIcon /></IconButton>
-            <IconButton onClick={() => { window.location.href = 'http://www.linkedin.com' }}><LinkedInIcon /></IconButton>
-            <IconButton onClick={() => { window.location.href = 'http://www.youtube.com' }}><YouTubeIcon /></IconButton>
-          </Grid>
-        </Grid>
-        <Grid item xs container wrap="nowrap" direction="column" className="description">
-          <Grid item xs>
+const AboutMe = (props) => {
+  const { t } = props
+  return (
+    <section className="aboutMe" id="aboutMe" name="aboutMe">
+      <Paper className="main-paper" elevation={24}>
+        <Grid container spacing={2} className="main-paper__content">
+          <Grid item xs={12} container justify="center" alignItems="center">
             <ThemeProvider theme={theme}>
-              <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p1')}</Typography>
-              <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p2')}</Typography>
+              <Typography variant="h4" className="title">{t('aboutMe.title')}</Typography>
             </ThemeProvider>
-            <Button variant="outlined" style={{ display: 'flex', alignSelf: 'flex-start', marginTop: '15px' }}>
-              {t('aboutMe.downloadCV')}
-            </Button>
           </Grid>
-
+          <Grid item xs container direction="column" justify="center" alignItems="center">
+            <Grid item xs style={{ textAlign: 'center' }}>
+              <img className="main-paper__image" alt="looking at computer" src={image} />
+            </Grid>
+            <Grid item xs className="icons">
+              <IconButton aria-label="facebook" rel="noopener" onClick={() => { window.location.href = 'http://www.facebook.com' }}><FacebookIcon /></IconButton>
+              <IconButton aria-label="instagram" rel="noopener" onClick={() => { window.location.href = 'http://www.instagram.com' }}><InstagramIcon /></IconButton>
+              <IconButton aria-label="linkedin" rel="noopener" onClick={() => { window.location.href = 'http://www.linkedin.com' }}><LinkedInIcon /></IconButton>
+              <IconButton aria-label="youtube" rel="noopener" onClick={() => { window.location.href = 'http://www.youtube.com' }}><YouTubeIcon /></IconButton>
+            </Grid>
+          </Grid>
+          <Grid item xs container wrap="nowrap" direction="column" className="description">
+            <Grid item xs>
+              <ThemeProvider theme={theme}>
+                <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p1')}</Typography>
+                <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p2')}</Typography>
+              </ThemeProvider>
+              <Button variant="outlined" aria-label="Download cv" style={{ display: 'flex', alignSelf: 'flex-start', marginTop: '15px' }}>
+                {t('aboutMe.downloadCV')}
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
-      </Grid>
-    </Paper>
-  </section>
-)
+      </Paper>
+    </section>
+  )
+}
 
 export default withNamespaces()(AboutMe)

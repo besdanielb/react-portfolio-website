@@ -2,7 +2,7 @@
     display: flex;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 3.5rem;
     background: rgba(0, 0, 0, 0.2);
     align-items: center;
@@ -12,7 +12,7 @@
 .MuiButton-root {
     color: white !important;
 
-    &:hover{
+    &:hover {
         color: skyblue !important;
     }
 }
@@ -26,7 +26,7 @@
     color: white !important;
 }
 
-.MuiTypography-body1{
+.MuiTypography-body1 {
     color: white;
 }
 

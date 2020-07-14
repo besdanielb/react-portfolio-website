@@ -10,7 +10,7 @@ const AboutMe = lazy(() => import('./components/aboutMe/aboutMe'))
 const Contacts = lazy(() => import('./components/contacts/contacts'))
 const Portfolio = lazy(() => import('./components/portfolio/portfolio'))
 
-const App = ({ t }) => (
+const App = () => (
   <div className="container">
     <NavBar />
     <Home />

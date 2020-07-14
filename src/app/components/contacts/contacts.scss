@@ -4,7 +4,7 @@ section#contacts {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     scroll-snap-align: center;
     background: url("../../images/portfolio-view-large.webp") no-repeat center center/cover;
@@ -37,22 +37,18 @@ section#contacts {
         width: 100%;
     }
 
-    .division {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        width: 70%;
-        margin-top: 1vw;
-        margin-bottom: 1vw;
-    }
-
     .contact-icon {
         margin-right: 0.5vw;
     }
 
+    .division {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        max-width: 80%;
+        width: 50%;
+    }
+
     .link-icons {
-        display: inline-flex;
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        padding-top: 1vw;
-        margin-top: 2vw;
+        padding-top: 0.5vw;
         & > * {
             color: white;
             margin-right: 0.5vw;
@@ -77,23 +73,33 @@ section#contacts {
         display: flex;
 
         &__items {
+            justify-items: center;
+
             &--title {
+                text-align: initial;
                 margin-bottom: 72px;
             }
 
-            &--email {
-                display: flex;
-                margin-top: 8px;
-                margin-bottom: 16px;
-            }
+            &--content {
+                max-width: 80%;
+                width: fit-content;
+                &--email {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-top: 8px;
+                    margin-bottom: 16px;
+                }
 
-            &--phone {
-                display: flex;
-                margin-bottom: 16px;
-            }
+                &--phone {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-bottom: 16px;
+                }
 
-            &--location {
-                display: flex;
+                &--location {
+                    justify-content: flex-start;
+                    display: flex;
+                }
             }
         }
     }
@@ -106,29 +112,28 @@ section#contacts {
             margin-top: 8vw;
 
             &__items {
-                text-align: center;
-
                 &--title {
+                    text-align: center;
                     margin-bottom: 4vw;
                 }
+                &--content {
+                    &--email {
+                        justify-content: center;
+                    }
 
-                &--email {
-                    display: block;
-                }
+                    &--phone {
+                        justify-content: center;
+                    }
 
-                &--phone {
-                    display: block;
-                }
-
-                &--location {
-                    display: block;
+                    &--location {
+                        justify-content: center;
+                    }
                 }
             }
         }
 
         .division {
-            width: 80%;
-            display: inline-flex;
+            width: 50vw;
         }
     }
 }
