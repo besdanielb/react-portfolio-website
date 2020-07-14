@@ -4,14 +4,8 @@ section#portfolio {
     width: 100vw;
     height: 100vh;
     scroll-snap-align: center;
-    background: url("../../images/portfolio-3-large.webp") no-repeat center center/cover;
-
-    .paper {
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-    }
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../images/portfolio-3-large.webp") no-repeat center center/cover;
 
     .MuiTypography-body1 {
         color: black;
@@ -23,6 +17,7 @@ section#portfolio {
         background: unset;
         overflow-x: unset;
         align-self: flex-end;
+        margin-top: 3.9rem;
         height: calc(100vh - 3.9rem);
     }
 

@@ -24,6 +24,7 @@ const useStyles = makeStyles(() => ({ root: { display: 'flex',
   alignSelf: 'flex-end',
   height: 'calc(100vh - 3.9rem)',
   overflowY: 'auto',
+  marginTop: '3.9rem',
 
   '& > *': { marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
@@ -59,105 +60,103 @@ const Contacts = (props) => {
   }
   return (
     <section id="contacts">
-      <div className="paper">
-        <form className={classes.root} onSubmit={handleSubmit(onSubmit)}>
-          <Grid container align="left" className="grid-container">
-            <Grid item container xs spacing={3}>
-              <Grid item xs={12}>
-                <ThemeProvider theme={theme}>
-                  <Typography variant="h3" paragraph>{t('contacts.title')}</Typography>
-                </ThemeProvider>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  required
-                  type="text"
-                  name="firstname"
-                  variant="outlined"
-                  label={t('contacts.firstName')}
-                  inputRef={register({ required: true })}
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <TextField
-                  required
-                  type="text"
-                  name="lastname"
-                  variant="outlined"
-                  label={t('contacts.lastName')}
-                  inputRef={register({ required: true })}
-                />
-              </Grid>
-              <Grid item xs={12} md={12}>
-                <TextField
-                  required
-                  type="email"
-                  name="email"
-                  variant="outlined"
-                  label={t('contacts.email')}
-                  inputRef={register({ required: true })}
-                />
-              </Grid>
-              <Grid item xs={12} md={12}>
-                <TextField
-                  required
-                  type="text"
-                  name="subject"
-                  variant="outlined"
-                  label={t('contacts.subject')}
-                  inputRef={register({ required: true })}
-                />
-              </Grid>
-              <Grid item xs={12} md={12}>
-                <TextField
-                  required
-                  multiline
-                  rows={10}
-                  type="text"
-                  name="description"
-                  variant="outlined"
-                  label={t('contacts.description')}
-                  inputRef={register({ required: true })}
-                />
-              </Grid>
-              <Grid item xs={12} md={12}>
-                <Button variant="outlined" aria-label="Send email" name="submit" type="submit">
-                  {t('contacts.sendEmail')}
-                  <SendIcon className="send-icon" />
-                </Button>
-              </Grid>
+      <form className={classes.root} onSubmit={handleSubmit(onSubmit)}>
+        <Grid container align="left" className="grid-container">
+          <Grid item container xs spacing={3}>
+            <Grid item xs={12}>
+              <ThemeProvider theme={theme}>
+                <Typography variant="h3" paragraph>{t('contacts.title')}</Typography>
+              </ThemeProvider>
             </Grid>
-            <Grid item container xs={12} sm={12} md={6} spacing={3} justify="center" align="center" className="my-info">
-              <Grid item xs align="center" className="my-info__items">
-                <ThemeProvider theme={theme}>
-                  <div className="my-info__items--content">
-                    <Typography variant="h3" className="my-info__items--title">{t('contacts.personal-info.title')}</Typography>
-                    <Typography variant="h5" paragraph className="my-info__items--content--email">
-                      <EmailIcon className="contact-icon" fontSize="small" />
-                      {t('contacts.personal-email')}
-                    </Typography>
-                    <Typography variant="h5" paragraph className="my-info__items--content--phone">
-                      <PhoneIcon className="contact-icon" fontSize="small" />
-                      {t('contacts.personal-number')}
-                    </Typography>
-                    <Typography variant="h5" paragraph className="my-info__items--content--location">
-                      <LocationCityIcon className="contact-icon" fontSize="small" />
-                      {t('contacts.location')}
-                    </Typography>
-                  </div>
-                  <div className="division" />
-                  <div className="link-icons">
-                    <IconButton target="_blank" rel="noopener" href="http://www.facebook.com"><FacebookIcon /></IconButton>
-                    <IconButton target="_blank" rel="noopener" href="http://www.instagram.com"><InstagramIcon /></IconButton>
-                    <IconButton target="_blank" rel="noopener" href="http://www.linkedin.com"><LinkedInIcon /></IconButton>
-                    <IconButton target="_blank" rel="noopener" href="http://www.youtube.com"><YouTubeIcon /></IconButton>
-                  </div>
-                </ThemeProvider>
-              </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                required
+                type="text"
+                name="firstname"
+                variant="outlined"
+                label={t('contacts.firstName')}
+                inputRef={register({ required: true })}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <TextField
+                required
+                type="text"
+                name="lastname"
+                variant="outlined"
+                label={t('contacts.lastName')}
+                inputRef={register({ required: true })}
+              />
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <TextField
+                required
+                type="email"
+                name="email"
+                variant="outlined"
+                label={t('contacts.email')}
+                inputRef={register({ required: true })}
+              />
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <TextField
+                required
+                type="text"
+                name="subject"
+                variant="outlined"
+                label={t('contacts.subject')}
+                inputRef={register({ required: true })}
+              />
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <TextField
+                required
+                multiline
+                rows={10}
+                type="text"
+                name="description"
+                variant="outlined"
+                label={t('contacts.description')}
+                inputRef={register({ required: true })}
+              />
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <Button variant="outlined" aria-label="Send email" name="submit" type="submit">
+                {t('contacts.sendEmail')}
+                <SendIcon className="send-icon" />
+              </Button>
             </Grid>
           </Grid>
-        </form>
-      </div>
+          <Grid item container xs={12} sm={12} md={6} spacing={3} justify="center" align="center" className="my-info">
+            <Grid item xs align="center" className="my-info__items">
+              <ThemeProvider theme={theme}>
+                <div className="my-info__items--content">
+                  <Typography variant="h3" className="my-info__items--title">{t('contacts.personal-info.title')}</Typography>
+                  <Typography variant="h5" paragraph className="my-info__items--content--email">
+                    <EmailIcon className="contact-icon" fontSize="small" />
+                    {t('contacts.personal-email')}
+                  </Typography>
+                  <Typography variant="h5" paragraph className="my-info__items--content--phone">
+                    <PhoneIcon className="contact-icon" fontSize="small" />
+                    {t('contacts.personal-number')}
+                  </Typography>
+                  <Typography variant="h5" paragraph className="my-info__items--content--location">
+                    <LocationCityIcon className="contact-icon" fontSize="small" />
+                    {t('contacts.location')}
+                  </Typography>
+                </div>
+                <div className="division" />
+                <div className="link-icons">
+                  <IconButton target="_blank" rel="noopener" href="http://www.facebook.com"><FacebookIcon /></IconButton>
+                  <IconButton target="_blank" rel="noopener" href="http://www.instagram.com"><InstagramIcon /></IconButton>
+                  <IconButton target="_blank" rel="noopener" href="http://www.linkedin.com"><LinkedInIcon /></IconButton>
+                  <IconButton target="_blank" rel="noopener" href="http://www.youtube.com"><YouTubeIcon /></IconButton>
+                </div>
+              </ThemeProvider>
+            </Grid>
+          </Grid>
+        </Grid>
+      </form>
     </section>
   )
 }

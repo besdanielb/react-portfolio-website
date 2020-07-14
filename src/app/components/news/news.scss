@@ -1,0 +1,35 @@
+section#news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../images/newspapers.webp") no-repeat center center/cover;
+    text-shadow: 1px 1px 15px black;
+
+    .container {
+        display: flex;
+        overflow-y: auto;
+        background: unset;
+        overflow-x: unset;
+        align-self: flex-end;
+        height: calc(100vh - 3.9rem);
+    }
+
+    .MuiTypography-h1 {
+        padding-bottom: 2vw !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    section#news {
+        .MuiTypography-h1 {
+            font-size: 20vw !important;
+            padding-bottom: 5vw;
+        }
+    }
+}

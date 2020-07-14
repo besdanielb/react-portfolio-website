@@ -84,13 +84,10 @@ const NavBar = (props) => {
           <MenuIcon className="menuIcon" onClick={handleDrawerToggle} />
         </Hidden>
         <Hidden smDown>
-          <Button href="#home">
-            {' '}
-            {t('navBar.home')}
-            {' '}
-          </Button>
+          <Button href="#home">{t('navBar.home')}</Button>
           <Button href="#aboutMe">{t('navBar.aboutMe')}</Button>
           <Button href="#portfolio">{t('navBar.portfolio')}</Button>
+          <Button href="#news">{t('navBar.news')}</Button>
           <Button href="#contacts">{t('navBar.contacts')}</Button>
         </Hidden>
         <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
