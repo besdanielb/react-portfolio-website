@@ -32,7 +32,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio">
       <div className="container">
-        <Grid container justify="center" alignItems="center" spacing={0}>
+        <Grid container justify="center" alignItems="center">
           <Grid item xs={12} sm={6} md={6} lg={4} className="card" align="center" onClick={() => { window.location.href = 'http://www.facebook.com' }}>
             <PortfolioCard className="portfolio-card" props={propsCard1} />
           </Grid>

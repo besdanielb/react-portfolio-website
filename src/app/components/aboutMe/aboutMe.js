@@ -2,15 +2,11 @@
 import React from 'react'
 import './aboutMe.scss'
 import { withNamespaces } from 'react-i18next'
-import Paper from '@material-ui/core/Paper'
-import FacebookIcon from '@material-ui/icons/Facebook'
-import InstagramIcon from '@material-ui/icons/Instagram'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import YouTubeIcon from '@material-ui/icons/YouTube'
-import { IconButton, Typography, Button } from '@material-ui/core'
+import { Typography, Button } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
-import image from '../../images/looking-at-computer.webp'
+import image from '../../images/looking-at-paper.webp'
+import FullWidthTabs from './tabs'
 
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
@@ -19,37 +15,33 @@ const AboutMe = (props) => {
   const { t } = props
   return (
     <section className="aboutMe" id="aboutMe" name="aboutMe">
-      <Paper className="main-paper" elevation={24}>
-        <Grid container spacing={2} className="main-paper__content">
-          <Grid item xs={12} container justify="center" alignItems="center">
-            <ThemeProvider theme={theme}>
-              <Typography variant="h4" className="title">{t('aboutMe.title')}</Typography>
-            </ThemeProvider>
-          </Grid>
-          <Grid item xs container direction="column" justify="center" alignItems="center">
-            <Grid item xs style={{ textAlign: 'center' }}>
-              <img className="main-paper__image" alt="looking at computer" src={image} />
+      <div className="container">
+        <ThemeProvider theme={theme}>
+          <Grid container spacing={3}>
+            <Grid item container xs={12} align="left" style={{ height: 'fit-content' }}>
+              <Typography variant="h2" className="title">{t('aboutMe.title')}</Typography>
             </Grid>
-            <Grid item xs className="icons">
-              <IconButton aria-label="facebook" rel="noopener" onClick={() => { window.location.href = 'http://www.facebook.com' }}><FacebookIcon /></IconButton>
-              <IconButton aria-label="instagram" rel="noopener" onClick={() => { window.location.href = 'http://www.instagram.com' }}><InstagramIcon /></IconButton>
-              <IconButton aria-label="linkedin" rel="noopener" onClick={() => { window.location.href = 'http://www.linkedin.com' }}><LinkedInIcon /></IconButton>
-              <IconButton aria-label="youtube" rel="noopener" onClick={() => { window.location.href = 'http://www.youtube.com' }}><YouTubeIcon /></IconButton>
-            </Grid>
-          </Grid>
-          <Grid item xs container wrap="nowrap" direction="column" className="description">
-            <Grid item xs>
-              <ThemeProvider theme={theme}>
+            <Grid container style={{ height: '80vh', alignContent: 'center' }}>
+              <Grid item container xs={12} md={4} justify="center" spacing={2}>
+                <Grid item xs={12} align="center">
+                  <img src={image} alt="looking at computer" className="image" />
+                </Grid>
+                <Grid item xs={12} align="center">
+                  <Button variant="outlined" aria-label="Download cv">
+                    {t('aboutMe.downloadCV')}
+                  </Button>
+                </Grid>
+              </Grid>
+              <Grid item xs={12} md={8} className="description">
                 <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p1')}</Typography>
                 <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p2')}</Typography>
-              </ThemeProvider>
-              <Button variant="outlined" aria-label="Download cv" style={{ display: 'flex', alignSelf: 'flex-start', marginTop: '15px' }}>
-                {t('aboutMe.downloadCV')}
-              </Button>
+                <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p3')}</Typography>
+                <FullWidthTabs />
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Paper>
+        </ThemeProvider>
+      </div>
     </section>
   )
 }

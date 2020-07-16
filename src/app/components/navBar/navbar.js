@@ -96,6 +96,7 @@ const NavBar = (props) => {
           <ExpandMoreOutlinedIcon />
         </Button>
         <Menu
+          style={{ top: '2rem', width: '12rem' }}
           id="simple-menu"
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
