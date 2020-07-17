@@ -21,7 +21,7 @@ function TabPanel(props) {
       aria-labelledby={`full-width-tab-${index}`}
     >
       {value === index && (
-        <Box p={2} style={{ backgroundColor: 'transparent' }}>
+        <Box p={3} style={{ backgroundColor: 'transparent' }}>
           <div>{children}</div>
         </Box>
       )}
@@ -36,8 +36,7 @@ function a11yProps(index) {
 
 const useStyles = makeStyles(() => ({ root: { backgroundColor: 'transparent',
   marginTop: '2vw',
-  width: '40vw' },
-'.MuiBox-root': { padding: '15px' } }))
+  maxWidth: '90%' } }))
 
 const FullWidthTabs = () => {
   const classes = useStyles()
@@ -45,6 +44,7 @@ const FullWidthTabs = () => {
   const [value, setValue] = React.useState(0)
 
   const handleChange = (event, newValue) => {
+    event.preventDefault()
     setValue(newValue)
   }
 
@@ -81,10 +81,16 @@ const FullWidthTabs = () => {
         <TabPanel value={value} index={1} dir={theme.direction}>
           <Typography variant={'h5'} paragraph>Experience? Nice meme bro</Typography>
           <Typography variant={'body2'} paragraph>Are you dumb, stupid or dumb?</Typography>
+          <Typography variant={'h5'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
+          <Typography variant={'h5'} paragraph>Music Composition</Typography>
+          <Typography variant={'body2'} paragraph>Im actually super good, you have no idea</Typography>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           <Typography variant={'h5'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
           <Typography variant={'body2'} paragraph>Podia ter ido para Aveiro que é melhor, mas era longe e não me deixam andar sozinha</Typography>
+          <Typography variant={'h5'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
         </TabPanel>
       </SwipeableViews>
     </div>

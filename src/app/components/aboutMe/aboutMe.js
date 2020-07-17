@@ -2,7 +2,7 @@
 import React from 'react'
 import './aboutMe.scss'
 import { withNamespaces } from 'react-i18next'
-import { Typography, Button } from '@material-ui/core'
+import { Typography, Button, Hidden } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 import image from '../../images/looking-at-paper.webp'
@@ -17,27 +17,33 @@ const AboutMe = (props) => {
     <section className="aboutMe" id="aboutMe" name="aboutMe">
       <div className="container">
         <ThemeProvider theme={theme}>
-          <Grid container spacing={3}>
-            <Grid item container xs={12} align="left" style={{ height: 'fit-content' }}>
-              <Typography variant="h2" className="title">{t('aboutMe.title')}</Typography>
+          <Grid container>
+            <Grid item container xs={12} justify="flex-end" alignContent="flex-end" style={{ height: '10vw', marginBottom: '2rem' }}>
+              <Grid item align="left" xs={12} md={8} className="title-container">
+                <Typography variant="h3" className="title">{t('aboutMe.title')}</Typography>
+              </Grid>
             </Grid>
-            <Grid container style={{ height: '80vh', alignContent: 'center' }}>
-              <Grid item container xs={12} md={4} justify="center" spacing={2}>
-                <Grid item xs={12} align="center">
+            <Grid item container xs={12} md={4} alignContent="center" className="image-container" style={{ height: '-webkit-fill-available', alignContent: 'baseline' }}>
+              <Grid item xs>
+                <Grid item align="center">
                   <img src={image} alt="looking at computer" className="image" />
                 </Grid>
-                <Grid item xs={12} align="center">
-                  <Button variant="outlined" aria-label="Download cv">
-                    {t('aboutMe.downloadCV')}
-                  </Button>
+                <Grid item xs style={{ height: 'fit-content', marginTop: '1rem' }}>
+                  <Hidden mdDown>
+                    <a href="/files/cv.txt" download>
+                      <Button variant="outlined" aria-label="Download cv">
+                        {t('aboutMe.downloadCV')}
+                      </Button>
+                    </a>
+                  </Hidden>
                 </Grid>
               </Grid>
-              <Grid item xs={12} md={8} className="description">
-                <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p1')}</Typography>
-                <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p2')}</Typography>
-                <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p3')}</Typography>
-                <FullWidthTabs />
-              </Grid>
+            </Grid>
+            <Grid item container xs={12} md={8} alignContent="center" className="description" style={{ height: '-webkit-fill-available', alignContent: 'baseline' }}>
+              <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p1')}</Typography>
+              <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p2')}</Typography>
+              <Typography variant="h6" paragraph className="p">{t('aboutMe.description.p3')}</Typography>
+              <FullWidthTabs className="tabs" />
             </Grid>
           </Grid>
         </ThemeProvider>

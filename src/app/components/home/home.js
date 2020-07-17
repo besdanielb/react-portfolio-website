@@ -13,7 +13,7 @@ const Home = (props) => {
   return (
     <section id="home">
       <MuiThemeProvider theme={theme}>
-        <Typography variant="h4">{t('home.introduction')}</Typography>
+        <Typography variant="h3">{t('home.introduction')}</Typography>
         <Typography variant="h1">{t('home.name')}</Typography>
         <Typography variant="h4">{t('home.description')}</Typography>
       </MuiThemeProvider>

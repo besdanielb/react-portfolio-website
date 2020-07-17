@@ -15,7 +15,7 @@ const Portfolio = () => {
   const propsCard1 = { cardTitle: 'title example',
     // eslint-disable-next-line global-require
     imagePath: require('../../images/headphones-large.webp'),
-    cardDescription: 'Lindo exemplo' }
+    cardDescription: 'Lindo exemplo asad asd asdasdsa ssdasdasdas asdasdsad asdsad sad sadasdas asdsadasd asdas ad sa sadasdadsadas ' }
 
   const propsCard2 = { cardTitle: 'title example',
     imagePath: require('../../images/portfolio-3-large.webp'),
@@ -27,12 +27,12 @@ const Portfolio = () => {
 
   const propsCard4 = { cardTitle: 'title example',
     imagePath: require('../../images/music-book-large.webp'),
-    cardDescription: 'Lindo exemplo' }
+    cardDescription: 'Lindo exemplo qweqweweqe qweqwewqeqwewqe qweqweqweqwewqewqeqwewqe wqe qweqwe qweqwe qw wqe qweasdsad  asdsadsadasd' }
 
   return (
     <section id="portfolio">
       <div className="container">
-        <Grid container justify="center" alignItems="center">
+        <Grid container justify="center" alignItems="baseline">
           <Grid item xs={12} sm={6} md={6} lg={4} className="card" align="center" onClick={() => { window.location.href = 'http://www.facebook.com' }}>
             <PortfolioCard className="portfolio-card" props={propsCard1} />
           </Grid>
