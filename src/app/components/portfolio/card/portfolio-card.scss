@@ -1,20 +1,24 @@
 .MuiCardHeader-root {
-    padding: 10px !important;
+    padding: 10px;
 }
 
 .MuiTypography-h5 {
-    font-size: 1rem !important;
-    font-weight: bold !important;
-    color: white !important;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
 }
 
 .MuiTypography-body1 {
-    font-size: 0.7rem !important;
-    color: white !important;
+    font-size: 0.7rem;
+    color: white;
 }
 
 .MuiPaper-root {
-    color: white !important;
+    color: white;
     text-align: left;
-    background-color: rgba(0, 0, 0, 0.7) !important;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.makeStyles-media-30 {
+    padding-top: 65%;
 }

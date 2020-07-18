@@ -79,7 +79,7 @@ const NavBar = (props) => {
 
   return (
     <div className={classes.root}>
-      <div className="navBar">
+      <div id="navbar">
         <Hidden mdUp>
           <MenuIcon className="menuIcon" onClick={handleDrawerToggle} />
         </Hidden>
@@ -87,6 +87,7 @@ const NavBar = (props) => {
           <Button href="#home">{t('navBar.home')}</Button>
           <Button href="#aboutMe">{t('navBar.aboutMe')}</Button>
           <Button href="#portfolio">{t('navBar.portfolio')}</Button>
+          <Button href="#gallery">{t('navBar.gallery')}</Button>
           <Button href="#news">{t('navBar.news')}</Button>
           <Button href="#contacts">{t('navBar.contacts')}</Button>
         </Hidden>

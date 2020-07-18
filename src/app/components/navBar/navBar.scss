@@ -1,4 +1,4 @@
-.navBar {
+div#navbar {
     display: flex;
     position: fixed;
     top: 0;
@@ -9,21 +9,21 @@
     justify-content: center;
 
     .MuiButton-root {
-        color: white !important;
+        color: white;
         height: 100%;
         font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
         &:hover {
-            color: skyblue !important;
+            color: skyblue;
         }
     }
 
     .MuiListItem-button:hover {
-        color: skyblue !important;
+        color: skyblue;
     }
 
     .MuiListItemIcon-root {
-        color: white !important;
+        color: white;
     }
 
     .menuIcon {

@@ -5,6 +5,7 @@ import { withNamespaces } from 'react-i18next'
 import { Typography, Button, Hidden } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import GetAppIcon from '@material-ui/icons/GetApp'
 import image from '../../images/looking-at-paper.webp'
 import FullWidthTabs from './tabs'
 
@@ -32,6 +33,7 @@ const AboutMe = (props) => {
                   <Hidden mdDown>
                     <a href="/files/cv.txt" download>
                       <Button variant="outlined" aria-label="Download cv">
+                        <GetAppIcon />
                         {t('aboutMe.downloadCV')}
                       </Button>
                     </a>

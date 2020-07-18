@@ -65,6 +65,7 @@ const FullWidthTabs = () => {
           <Tab label="Main Skills" {...a11yProps(0)} />
           <Tab label="Experience" {...a11yProps(1)} />
           <Tab label="Education" {...a11yProps(2)} />
+          <Tab label="Awards" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -87,6 +88,12 @@ const FullWidthTabs = () => {
           <Typography variant={'body2'} paragraph>Im actually super good, you have no idea</Typography>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
+          <Typography variant={'h5'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
+          <Typography variant={'body2'} paragraph>Podia ter ido para Aveiro que é melhor, mas era longe e não me deixam andar sozinha</Typography>
+          <Typography variant={'h5'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
+        </TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction}>
           <Typography variant={'h5'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
           <Typography variant={'body2'} paragraph>Podia ter ido para Aveiro que é melhor, mas era longe e não me deixam andar sozinha</Typography>
           <Typography variant={'h5'} paragraph>Chatear o peeps</Typography>

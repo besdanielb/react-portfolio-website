@@ -10,21 +10,22 @@ section#home {
     text-shadow: 1px 1px 10px black;
 
     .MuiTypography-h1 {
-        padding-bottom: 2vw !important;
+        padding-bottom: 1vw !important;
+        align-self: center;
         font-size: 7vw;
-        font-weight: 400;
+        letter-spacing: 1rem;
     }
 
     .MuiTypography-h4 {
-        font-weight: bold;
+        letter-spacing: 0.5rem;
     }
-}
 
-@media only screen and (max-width: 768px) {
-    section#home {
-        .MuiTypography-h1 {
-            font-size: 20vw !important;
-            padding-bottom: 5vw;
-        }
+    .MuiTypography-h3 {
+        letter-spacing: 0.5rem;
+    }
+
+    h1 {
+        font-size: 3em;
+        font-weight: normal;
     }
 }

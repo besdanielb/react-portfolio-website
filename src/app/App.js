@@ -9,6 +9,7 @@ import '../i18n'
 const AboutMe = lazy(() => import('./components/aboutMe/aboutMe'))
 const Contacts = lazy(() => import('./components/contacts/contacts'))
 const Portfolio = lazy(() => import('./components/portfolio/portfolio'))
+const Gallery = lazy(() => import('./components/gallery/gallery'))
 const News = lazy(() => import('./components/news/news'))
 
 const App = () => (
@@ -20,6 +21,9 @@ const App = () => (
     </Suspense>
     <Suspense fallback={<div />}>
       <Portfolio />
+    </Suspense>
+    <Suspense fallback={<div />}>
+      <Gallery />
     </Suspense>
     <Suspense fallback={<div />}>
       <News />
