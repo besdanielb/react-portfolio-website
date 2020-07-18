@@ -1,31 +1,15 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react'
-import { makeStyles, responsiveFontSizes, withStyles, useTheme } from '@material-ui/core/styles'
 import './gallery.scss'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-import tileData from './tileData'
 import image1 from '../../images/headphones-large.webp'
 import image2 from '../../images/portfolio-3-large.webp'
 import image3 from '../../images/newspapers.webp'
 import image4 from '../../images/shapes.webp'
 import image5 from '../../images/portfolio-view-large.webp'
 
-const useStyles = makeStyles(() => ({ root: { display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'space-around',
-  overflow: 'hidden',
-  alignContent: 'center',
-  backgroundColor: 'transparent',
-  padding: '2rem',
-  height: 'calc(100vh - 3.9rem)' },
-gridList: { height: 'calc(100vh - 3.9rem)', alignItems: 'flex-end', marginTop: '1.9rem !important' },
-image: { '&:hover': { opacity: 0.25 } } }))
-
-const Gallery = (props) => {
-  const { t } = props
-  const theme = useTheme()
-  const classes = useStyles()
+const Gallery = () => {
   const responsive = { 0: { items: 1 },
     600: { items: 2 },
     1024: { items: 3 } }
@@ -39,7 +23,6 @@ const Gallery = (props) => {
         responsive={responsive}
         fadeOutAnimation
         buttonsDisabled
-        mouseDragEnabled
         mouseTrackingEnabled
       >
         <img src={image1} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 1" />
@@ -127,4 +110,4 @@ const Gallery = (props) => {
   }
 } */
 
-export default withStyles(useStyles)(Gallery)
+export default Gallery
