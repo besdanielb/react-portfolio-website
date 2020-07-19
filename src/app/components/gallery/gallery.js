@@ -1,19 +1,23 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react'
 import './gallery.scss'
+import { withNamespaces } from 'react-i18next'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-import image1 from '../../images/headphones-large.webp'
-import image2 from '../../images/portfolio-3-large.webp'
-import image3 from '../../images/newspapers.webp'
-import image4 from '../../images/shapes.webp'
-import image5 from '../../images/portfolio-view-large.webp'
+import { Typography } from '@material-ui/core'
+import InfoIcon from '@material-ui/icons/Info'
+import galleryData from './galleryData'
 
-const Gallery = () => {
+const Gallery = (props) => {
+  const { t } = props
   const responsive = { 0: { items: 1 },
     600: { items: 2 },
-    1024: { items: 3 } }
+    1024: { items: 3 },
+    1600: { items: 4 },
+    2000: { items: 5 } }
   const handleOnDragStart = (e) => e.preventDefault()
+
   return (
     <section id="gallery">
       <AliceCarousel
@@ -22,15 +26,25 @@ const Gallery = () => {
         autoPlayInterval={3000}
         responsive={responsive}
         fadeOutAnimation
-        buttonsDisabled
+        showSlideInfo
+        disableAutoPlayOnAction
         mouseTrackingEnabled
+        preventEventOnTouchMove
       >
-        <img src={image1} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 1" />
-        <img src={image2} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 2" />
-        <img src={image3} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 3" />
-        <img src={image4} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 1" />
-        <img src={image5} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 2" />
-        <img src={image3} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 3" />
+        {galleryData.map((galleryItem, index) => (
+          <div className="image-container">
+            <img key={galleryItem.id} src={galleryItem.image} onDragStart={handleOnDragStart} className="sliderimg" alt="" />
+            <div className="sliderimg--description">
+              <Typography variant="h6" className="sliderimg--description__title">
+                {t(`gallery.image${index + 1}.title`)}
+              </Typography>
+              <Typography variant="body2" className="sliderimg--description__description">
+                {t(`gallery.image${index + 1}.description`)}
+              </Typography>
+              <InfoIcon className="sliderimg--description__icon" />
+            </div>
+          </div>
+        ))}
       </AliceCarousel>
     </section>
   )
@@ -110,4 +124,4 @@ const Gallery = () => {
   }
 } */
 
-export default Gallery
+export default withNamespaces()(Gallery)

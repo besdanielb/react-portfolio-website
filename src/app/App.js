@@ -12,7 +12,7 @@ const Portfolio = lazy(() => import('./components/portfolio/portfolio'))
 const Gallery = lazy(() => import('./components/gallery/gallery'))
 const News = lazy(() => import('./components/news/news'))
 
-const App = () => (
+const App = ({ t }) => (
   <div className="container">
     <NavBar />
     <Home />

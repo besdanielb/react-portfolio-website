@@ -10,34 +10,88 @@ section#gallery {
         url("../../images/shapes.webp") no-repeat center center/cover;
     text-shadow: 1px 1px 10px black;
 
-    .tile {
-        margin: 15px;
-        cursor: pointer;
-        overflow: hidden;
-        width: 20vw;
-        height: 16vw;
-        img {
-            transition: transform 500ms ease;
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
-    }
-
     .alice-carousel {
         width: 90%;
-    }
-
-    .sliderimg {
-        width: 100%;
-        height: 50vh;
-        border-radius: 10px;
-        object-fit: cover;
     }
 
     .alice-carousel__stage-item {
         padding-left: 10px;
         padding-right: 10px;
         box-sizing: border-box;
+    }
+
+    .alice-carousel__prev-btn-item,
+    .alice-carousel__next-btn-item {
+        color: white;
+
+        &:hover {
+            color: skyblue;
+        }
+    }
+
+    .alice-carousel__dots-item:hover,
+    .alice-carousel__dots-item.__active {
+        background-color: skyblue;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 65vh;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover .sliderimg--description {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &:hover .sliderimg {
+            box-shadow: "0 0 40px 5px rgba(0, 0, 0, 0.3)";
+        }
+    }
+
+    .sliderimg {
+        width: 100%;
+        height: 65vh;
+        border-radius: 6px;
+        object-fit: cover;
+        position: relative;
+        transition: transform 0.1s, opacity 0.4s, visibility 0.4s;
+
+        &--description {
+            display: block;
+            position: absolute;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+            color: #fff;
+            border-radius: 6px;
+            visibility: hidden;
+            opacity: 0;
+            transition: transform 0.8s, opacity 0.5s, visibility 0.5s;
+            text-align: left;
+
+            &__title {
+                font-weight: bold;
+                position: absolute;
+                bottom: 15%;
+                margin: 1rem;
+            }
+
+            &__description {
+                position: absolute;
+                bottom: 5%;
+                margin: 1rem;
+            }
+
+            &__icon {
+                position: absolute;
+                right: 2%;
+                bottom: 2%;
+            }
+        }
     }
 }

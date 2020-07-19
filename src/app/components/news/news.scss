@@ -38,7 +38,7 @@ section#news {
         .image {
             height: 600px;
             width: 400px;
-            border-radius: 10px;
+            border-radius: 6px;
             transition: transform 0.4s;
 
             &--description {
@@ -59,7 +59,7 @@ section#news {
                 &__title {
                     font-weight: bold;
                     position: absolute;
-                    bottom: 12%;
+                    bottom: 15%;
                     margin: 1rem;
                 }
 

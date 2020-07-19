@@ -2,57 +2,56 @@
 import React from 'react'
 import './portfolio.scss'
 import { withNamespaces } from 'react-i18next'
-import { Grid } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
-import PortfolioCard from './card/portfolio-card'
-
-const useStyles = makeStyles(() => ({ root: { flexGrow: 1 },
-  card: { textAlign: 'center' } }))
+import AliceCarousel from 'react-alice-carousel'
+import 'react-alice-carousel/lib/alice-carousel.css'
+import { Typography } from '@material-ui/core'
+import InfoIcon from '@material-ui/icons/Info'
+import image1 from '../../images/headphones-large.webp'
+import image2 from '../../images/portfolio-3-large.webp'
+import image3 from '../../images/newspapers.webp'
+import image4 from '../../images/shapes.webp'
+import image5 from '../../images/portfolio-view-large.webp'
 
 const Portfolio = () => {
-  const classes = useStyles()
-
-  const propsCard1 = { cardTitle: 'title example',
-    // eslint-disable-next-line global-require
-    imagePath: require('../../images/headphones-large.webp'),
-    cardDescription: 'Lindo exemplo asad asd asdasdsa ssdasdasdas asdasdsad asdsad sad sadasdas asdsadasd asdas ad sa sadasdadsadas ' }
-
-  const propsCard2 = { cardTitle: 'title example',
-    imagePath: require('../../images/portfolio-3-large.webp'),
-    cardDescription: 'Lindo exemplo' }
-
-  const propsCard3 = { cardTitle: 'title example',
-    imagePath: require('../../images/portfolio-view-large.webp'),
-    cardDescription: 'Lindo exemplo' }
-
-  const propsCard4 = { cardTitle: 'title example',
-    imagePath: require('../../images/music-book-large.webp'),
-    cardDescription: 'Lindo exemplo qweqweweqe qweqwewqeqwewqe qweqweqweqwewqewqeqwewqe wqe qweqwe qweqwe qw wqe qweasdsad  asdsadsadasd' }
+  const responsive = { 0: { items: 1 },
+    600: { items: 2 },
+    1024: { items: 3 },
+    1600: { items: 4 },
+    2000: { items: 5 } }
+  const handleOnDragStart = (e) => e.preventDefault()
 
   return (
     <section id="portfolio">
-      <div className="container">
-        <Grid container justify="center" alignItems="baseline">
-          <Grid item xs={12} sm={6} md={6} lg={4} className="card" align="center" onClick={() => { window.location.href = 'http://www.facebook.com' }}>
-            <PortfolioCard className="portfolio-card" props={propsCard1} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={4} className="card" align="center">
-            <PortfolioCard className={classes.card} props={propsCard2} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={4} className="card" align="center">
-            <PortfolioCard className={classes.card} props={propsCard3} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={4} className="card" align="center">
-            <PortfolioCard className={classes.card} props={propsCard3} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={4} className="card" align="center">
-            <PortfolioCard className={classes.card} props={propsCard4} />
-          </Grid>
-          <Grid item xs={12} sm={6} md={6} lg={4} className="card" align="center">
-            <PortfolioCard className={classes.card} props={propsCard1} />
-          </Grid>
-        </Grid>
-      </div>
+      <AliceCarousel
+        autoPlay
+        duration={400}
+        autoPlayInterval={3000}
+        responsive={responsive}
+        fadeOutAnimation
+        controlsStrategy="responsive"
+        showSlideInfo
+        disableAutoPlayOnAction
+        mouseTrackingEnabled
+        preventEventOnTouchMove
+      >
+
+        <div className="image-container">
+          <a target="_blank" rel="noopener noreferrer" href="http://www.google.com">
+            <img src={image1} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 1" />
+            <div className="sliderimg--description">
+              <Typography variant="h6" className="sliderimg--description__title"> Next event September 12th 2020</Typography>
+              <Typography variant="body2" className="sliderimg--description__description"> This thing is gonna be do açu meu menino,  sdfdsfdsf dsfdsfdsf sdf sdaquilo é que vai ser, é de não perder filho.</Typography>
+              <InfoIcon className="sliderimg--description__icon" />
+            </div>
+          </a>
+        </div>
+
+        <img src={image2} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 2" />
+        <img src={image3} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 3" />
+        <img src={image4} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 4" />
+        <img src={image5} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 5" />
+        <img src={image3} onDragStart={handleOnDragStart} className="sliderimg" alt="supp 6" />
+      </AliceCarousel>
     </section>
   )
 }

@@ -14,7 +14,6 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import LocationCityIcon from '@material-ui/icons/LocationCity'
-
 import * as emailjs from 'emailjs-com'
 
 let theme = createMuiTheme()
@@ -43,6 +42,7 @@ const useStyles = makeStyles(() => ({ root: { display: 'flex',
     '&.Mui-focused fieldset': { borderColor: 'white' } } } }))
 
 const Contacts = (props) => {
+  console.log(props)
   const { t } = props
   const classes = useStyles()
   const { register, handleSubmit } = useForm()

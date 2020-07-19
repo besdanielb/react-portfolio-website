@@ -25,5 +25,10 @@
     "contacts.personal-email": "olvia.silva@gmail.com",
     "contacts.personal-info.title": "Os meus contactos",
     "contacts.location": "Porto, Portugal",
-    "contacts.personal-number": "+351 999 999 999"
+    "contacts.personal-number": "+351 999 999 999",
+    "gallery.image1.title": "Titulo da imagem 1",
+    "gallery.image2.title": "Titulo da imagem 2",
+    "gallery.image3.title": "Titulo da imagem 3",
+    "gallery.image4.title": "Titulo da imagem 4",
+    "gallery.image5.title": "Titulo da imagem 5"
 }
