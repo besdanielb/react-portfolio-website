@@ -61,12 +61,12 @@ const Contacts = (props) => {
     <section id="contacts">
       <form className={classes.root} onSubmit={handleSubmit(onSubmit)}>
         <Grid container align="left" className="grid-container">
-          <Grid item container xs spacing={3}>
-            <Grid item xs={12}>
-              <ThemeProvider theme={theme}>
-                <Typography variant="h3" paragraph>{t('contacts.title')}</Typography>
-              </ThemeProvider>
-            </Grid>
+          <Grid item xs={12} style={{ height: 'fit-content' }}>
+            <ThemeProvider theme={theme}>
+              <Typography variant="h3" paragraph>{t('contacts.title')}</Typography>
+            </ThemeProvider>
+          </Grid>
+          <Grid item container xs spacing={3} style={{ height: '80%' }}>
             <Grid item xs={12} md={6}>
               <TextField
                 required
@@ -87,7 +87,7 @@ const Contacts = (props) => {
                 inputRef={register({ required: true })}
               />
             </Grid>
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12}>
               <TextField
                 required
                 type="email"
@@ -97,7 +97,7 @@ const Contacts = (props) => {
                 inputRef={register({ required: true })}
               />
             </Grid>
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12}>
               <TextField
                 required
                 type="text"
@@ -107,7 +107,7 @@ const Contacts = (props) => {
                 inputRef={register({ required: true })}
               />
             </Grid>
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12}>
               <TextField
                 required
                 multiline
@@ -119,7 +119,7 @@ const Contacts = (props) => {
                 inputRef={register({ required: true })}
               />
             </Grid>
-            <Grid item xs={12} md={12}>
+            <Grid item xs={12}>
               <Button variant="outlined" aria-label="Send email" name="submit" type="submit">
                 {t('contacts.sendEmail')}
                 <SendIcon className="send-icon" />
@@ -129,7 +129,7 @@ const Contacts = (props) => {
           <Grid item container xs={12} sm={12} md={6} spacing={3} justify="center" align="center" className="my-info">
             <Grid item xs align="center" className="my-info__items">
               <ThemeProvider theme={theme}>
-                <div className="my-info__items--content">
+                {/* <div className="my-info__items--content">
                   <Typography variant="h3" className="my-info__items--title">{t('contacts.personal-info.title')}</Typography>
                   <Typography variant="h5" paragraph className="my-info__items--content--email">
                     <EmailIcon className="contact-icon" fontSize="small" />
@@ -143,8 +143,27 @@ const Contacts = (props) => {
                     <LocationCityIcon className="contact-icon" fontSize="small" />
                     {t('contacts.location')}
                   </Typography>
+                </div> */}
+                <div className="my-info__contact-info" id="email">
+                  <div className="my-info__contact-info--icon">
+                    <EmailIcon className="contact-icon" fontSize="large" />
+                  </div>
+                  <div className="my-info__contact-info--content">
+                    <Typography variant="body2" paragraph className="my-info__items--content--email">olvia.silva@gmail.com</Typography>
+                    <Typography variant="body2" paragraph className="my-info__items--content--email">trabalhasemuito@hotmail.com</Typography>
+                  </div>
+                </div>
+                <div className="my-info__contact-info">
+                  <div className="my-info__contact-info--icon">
+                    <PhoneIcon className="contact-icon" fontSize="large" />
+                  </div>
+                  <div className="my-info__contact-info--content">
+                    <Typography variant="body2" paragraph className="my-info__items--content--email">+351 915 565 489</Typography>
+                    <Typography variant="body2" paragraph className="my-info__items--content--email">+351 225 456 654</Typography>
+                  </div>
                 </div>
                 <div className="division" />
+                <div className="division" style={{ marginTop: '5px' }} />
                 <div className="link-icons">
                   <IconButton target="_blank" rel="noopener" href="http://www.facebook.com"><FacebookIcon /></IconButton>
                   <IconButton target="_blank" rel="noopener" href="http://www.instagram.com"><InstagramIcon /></IconButton>

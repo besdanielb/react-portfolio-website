@@ -30,13 +30,13 @@ section#contacts {
     }
 
     .contact-icon {
-        margin-right: 0.5vw;
+        vertical-align: sub;
     }
 
     .division {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        max-width: 80%;
-        width: 50%;
+        min-width: 300px;
+        width: 45%;
     }
 
     .link-icons {
@@ -80,6 +80,7 @@ section#contacts {
                     justify-content: flex-start;
                     margin-top: 8px;
                     margin-bottom: 16px;
+                    color: black;
                 }
 
                 &--phone {
@@ -92,6 +93,37 @@ section#contacts {
                     justify-content: flex-start;
                     display: flex;
                 }
+            }
+        }
+
+        &__contact-info {
+            box-sizing: border-box;
+            border: 1px solid #ebebeb;
+            border-radius: 10px;
+            background: #fff;
+            position: relative;
+            padding: 54px 40px 50px;
+            width: 18rem;
+            height: 11rem;
+            margin-bottom: 2rem;
+
+            &#email {
+                margin-bottom: 4rem;
+            }
+
+            &--icon {
+                border: 1px solid #ebebeb;
+                width: 65px;
+                height: 65px;
+                color: red;
+                line-height: 63px;
+                text-align: center;
+                border-radius: 100%;
+                background: #fff;
+                font-size: 28px;
+                position: absolute;
+                top: -31px;
+                left: 47px;
             }
         }
     }
@@ -108,24 +140,15 @@ section#contacts {
                     text-align: center;
                     margin-bottom: 4vw;
                 }
-                &--content {
-                    &--email {
-                        justify-content: center;
-                    }
+            }
 
-                    &--phone {
-                        justify-content: center;
-                    }
-
-                    &--location {
-                        justify-content: center;
-                    }
-                }
+            &__contact-info {
+                margin-top: 12vh;
             }
         }
 
         .division {
-            width: 50vw;
+            width: 100%;
         }
     }
 }

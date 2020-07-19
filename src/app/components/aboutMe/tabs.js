@@ -38,7 +38,8 @@ const useStyles = makeStyles(() => ({ root: { backgroundColor: 'transparent',
   marginTop: '2vw',
   maxWidth: '90%' } }))
 
-const FullWidthTabs = () => {
+const FullWidthTabs = (props) => {
+  const { t } = props
   const classes = useStyles()
   const theme = useTheme()
   const [value, setValue] = React.useState(0)
@@ -62,10 +63,10 @@ const FullWidthTabs = () => {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab label="Main Skills" {...a11yProps(0)} />
-          <Tab label="Experience" {...a11yProps(1)} />
-          <Tab label="Education" {...a11yProps(2)} />
-          <Tab label="Awards" {...a11yProps(3)} />
+          <Tab label={t('aboutMe.tab1')} {...a11yProps(0)} />
+          <Tab label={t('aboutMe.tab2')} {...a11yProps(1)} />
+          <Tab label={t('aboutMe.tab3')} {...a11yProps(2)} />
+          <Tab label={t('aboutMe.tab4')} {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -74,29 +75,29 @@ const FullWidthTabs = () => {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <Typography variant={'h5'} paragraph>Music Composition</Typography>
+          <Typography variant={'h6'} paragraph>Music Composition</Typography>
           <Typography variant={'body2'} paragraph>Im actually super good, you have no idea</Typography>
-          <Typography variant={'h5'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'h6'} paragraph>Chatear o peeps</Typography>
           <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <Typography variant={'h5'} paragraph>Experience? Nice meme bro</Typography>
+          <Typography variant={'h6'} paragraph>Experience? Nice meme bro</Typography>
           <Typography variant={'body2'} paragraph>Are you dumb, stupid or dumb?</Typography>
-          <Typography variant={'h5'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'h6'} paragraph>Chatear o peeps</Typography>
           <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
-          <Typography variant={'h5'} paragraph>Music Composition</Typography>
+          <Typography variant={'h6'} paragraph>Music Composition</Typography>
           <Typography variant={'body2'} paragraph>Im actually super good, you have no idea</Typography>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Typography variant={'h5'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
+          <Typography variant={'h6'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
           <Typography variant={'body2'} paragraph>Podia ter ido para Aveiro que é melhor, mas era longe e não me deixam andar sozinha</Typography>
-          <Typography variant={'h5'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'h6'} paragraph>Chatear o peeps</Typography>
           <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-          <Typography variant={'h5'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
+          <Typography variant={'h6'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
           <Typography variant={'body2'} paragraph>Podia ter ido para Aveiro que é melhor, mas era longe e não me deixam andar sozinha</Typography>
-          <Typography variant={'h5'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'h6'} paragraph>Chatear o peeps</Typography>
           <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
         </TabPanel>
       </SwipeableViews>

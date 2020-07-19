@@ -30,7 +30,6 @@ const Portfolio = (props) => {
         controlsStrategy="responsive"
         showSlideInfo
         disableAutoPlayOnAction
-        mouseTrackingEnabled
         preventEventOnTouchMove
       >
         {portfolioData.map((portfolioItem, i) => (
