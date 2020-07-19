@@ -6,11 +6,10 @@ import { withNamespaces } from 'react-i18next'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import { Typography } from '@material-ui/core'
-import InfoIcon from '@material-ui/icons/Info'
 import galleryData from './galleryData'
 
 const Gallery = (props) => {
-  const { t } = props
+  const { i18n } = props
   const responsive = { 0: { items: 1 },
     600: { items: 2 },
     1024: { items: 3 },
@@ -31,17 +30,16 @@ const Gallery = (props) => {
         mouseTrackingEnabled
         preventEventOnTouchMove
       >
-        {galleryData.map((galleryItem, index) => (
-          <div className="image-container">
+        {galleryData.map((galleryItem, i) => (
+          <div key={i} className="image-container">
             <img key={galleryItem.id} src={galleryItem.image} onDragStart={handleOnDragStart} className="sliderimg" alt="" />
             <div className="sliderimg--description">
               <Typography variant="h6" className="sliderimg--description__title">
-                {t(`gallery.image${index + 1}.title`)}
+                {galleryItem.title[i18n.language]}
               </Typography>
               <Typography variant="body2" className="sliderimg--description__description">
-                {t(`gallery.image${index + 1}.description`)}
+                {galleryItem.description[i18n.language]}
               </Typography>
-              <InfoIcon className="sliderimg--description__icon" />
             </div>
           </div>
         ))}

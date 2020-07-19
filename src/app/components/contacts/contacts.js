@@ -42,7 +42,6 @@ const useStyles = makeStyles(() => ({ root: { display: 'flex',
     '&.Mui-focused fieldset': { borderColor: 'white' } } } }))
 
 const Contacts = (props) => {
-  console.log(props)
   const { t } = props
   const classes = useStyles()
   const { register, handleSubmit } = useForm()
