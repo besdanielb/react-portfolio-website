@@ -3,13 +3,14 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import SwipeableViews from 'react-swipeable-views'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { useTheme } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import { withNamespaces } from 'react-i18next'
+import './aboutMe.scss'
 
 function TabPanel(props) {
   const { children, value, index } = props
@@ -34,13 +35,8 @@ function a11yProps(index) {
     'aria-controls': `full-width-tabpanel-${index}` }
 }
 
-const useStyles = makeStyles(() => ({ root: { backgroundColor: 'transparent',
-  marginTop: '2vw',
-  maxWidth: '90%' } }))
-
 const FullWidthTabs = (props) => {
   const { t } = props
-  const classes = useStyles()
   const theme = useTheme()
   const [value, setValue] = React.useState(0)
 
@@ -54,7 +50,7 @@ const FullWidthTabs = (props) => {
   }
 
   return (
-    <div className={classes.root}>
+    <div className="appbar-root">
       <AppBar position="static" color="default">
         <Tabs
           value={value}
@@ -63,10 +59,10 @@ const FullWidthTabs = (props) => {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab label={t('aboutMe.tab1')} {...a11yProps(0)} />
-          <Tab label={t('aboutMe.tab2')} {...a11yProps(1)} />
-          <Tab label={t('aboutMe.tab3')} {...a11yProps(2)} />
-          <Tab label={t('aboutMe.tab4')} {...a11yProps(3)} />
+          <Tab style={{ fontWeight: 'bold' }} label={t('aboutMe.tab1')} {...a11yProps(0)} />
+          <Tab style={{ fontWeight: 'bold' }} label={t('aboutMe.tab2')} {...a11yProps(1)} />
+          <Tab style={{ fontWeight: 'bold' }} label={t('aboutMe.tab3')} {...a11yProps(2)} />
+          <Tab style={{ fontWeight: 'bold' }} label={t('aboutMe.tab4')} {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -85,8 +81,6 @@ const FullWidthTabs = (props) => {
           <Typography variant={'body2'} paragraph>Are you dumb, stupid or dumb?</Typography>
           <Typography variant={'h6'} paragraph>Chatear o peeps</Typography>
           <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
-          <Typography variant={'h6'} paragraph>Music Composition</Typography>
-          <Typography variant={'body2'} paragraph>Im actually super good, you have no idea</Typography>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           <Typography variant={'h6'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>

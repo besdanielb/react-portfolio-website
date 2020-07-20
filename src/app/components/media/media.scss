@@ -1,0 +1,44 @@
+section#media {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+        url("../../images/book.webp") no-repeat center center/cover;
+    text-shadow: 1px 1px 15px black;
+
+    .grid-container {
+        padding: 5vw;
+        align-self: center;
+    }
+    .container {
+        display: flex;
+        background: unset;
+        align-self: center;
+        align-items: center;
+        margin-top: 3.9rem;
+        height: calc(100vh - 3.9rem);
+        overflow-y: hidden;
+        width: 100%;
+    }
+
+    .iframe {
+        height: 30vh;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    section#media {
+        .container {
+            overflow-y: scroll;
+        }
+
+        .grid-container {
+            align-self: end;
+        }
+    }
+}

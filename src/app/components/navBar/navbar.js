@@ -15,9 +15,12 @@ import MenuIcon from '@material-ui/icons/Menu'
 import HomeIcon from '@material-ui/icons/Home'
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic'
 import PersonIcon from '@material-ui/icons/Person'
-import Divider from '@material-ui/core/Divider'
+import DescriptionIcon from '@material-ui/icons/Description'
+import AnnouncementIcon from '@material-ui/icons/Announcement'
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary'
 import Drawer from '@material-ui/core/Drawer'
 import Hidden from '@material-ui/core/Hidden'
+import AudiotrackIcon from '@material-ui/icons/Audiotrack'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
@@ -34,7 +37,7 @@ const useStyles = makeStyles((theme) => ({ root: { display: 'flex' },
     color: 'white' } },
   toolbar: { marginTop: '9vw' },
   drawerPaper: { width: drawerWidth,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)' },
+    backgroundColor: 'rgba(255, 255, 255, 0.9)' },
   content: { flexGrow: 1,
     padding: theme.spacing(3) } }))
 
@@ -87,6 +90,7 @@ const NavBar = (props) => {
           <Button href="#home">{t('navBar.home')}</Button>
           <Button href="#aboutMe">{t('navBar.aboutMe')}</Button>
           <Button href="#portfolio">{t('navBar.portfolio')}</Button>
+          <Button href="#media">{t('navBar.media')}</Button>
           <Button href="#gallery">{t('navBar.gallery')}</Button>
           <Button href="#news">{t('navBar.news')}</Button>
           <Button href="#contacts">{t('navBar.contacts')}</Button>
@@ -122,9 +126,8 @@ const NavBar = (props) => {
           >
             <div>
               <div className={classes.toolbar} />
-              <Divider />
               <List>
-                <ListItemLink href="#home" onClick={handleDrawerToggle}>
+                <ListItemLink href="#home" className="drawer__icon" onClick={handleDrawerToggle}>
                   <ListItemIcon><HomeIcon /></ListItemIcon>
                   <ListItemText primary={t('navBar.home')} />
                 </ListItemLink>
@@ -133,15 +136,26 @@ const NavBar = (props) => {
                   <ListItemText primary={t('navBar.aboutMe')} />
                 </ListItemLink>
                 <ListItemLink href="#portfolio" onClick={handleDrawerToggle}>
-                  <ListItemIcon><LibraryMusicIcon /></ListItemIcon>
+                  <ListItemIcon><DescriptionIcon /></ListItemIcon>
                   <ListItemText primary={t('navBar.portfolio')} />
+                </ListItemLink>
+                <ListItemLink href="#media" onClick={handleDrawerToggle}>
+                  <ListItemIcon><AudiotrackIcon /></ListItemIcon>
+                  <ListItemText primary={t('navBar.media')} />
+                </ListItemLink>
+                <ListItemLink href="#gallery" onClick={handleDrawerToggle}>
+                  <ListItemIcon><PhotoLibraryIcon /></ListItemIcon>
+                  <ListItemText primary={t('navBar.gallery')} />
+                </ListItemLink>
+                <ListItemLink href="#news" onClick={handleDrawerToggle}>
+                  <ListItemIcon><AnnouncementIcon /></ListItemIcon>
+                  <ListItemText primary={t('navBar.news')} />
                 </ListItemLink>
                 <ListItemLink href="#contacts" onClick={handleDrawerToggle}>
                   <ListItemIcon><MailIcon /></ListItemIcon>
                   <ListItemText primary={t('navBar.contacts')} />
                 </ListItemLink>
               </List>
-              <Divider />
             </div>
           </Drawer>
         </Hidden>

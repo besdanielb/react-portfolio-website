@@ -13,7 +13,6 @@ import FacebookIcon from '@material-ui/icons/Facebook'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import YouTubeIcon from '@material-ui/icons/YouTube'
-import LocationCityIcon from '@material-ui/icons/LocationCity'
 import * as emailjs from 'emailjs-com'
 
 let theme = createMuiTheme()
@@ -129,28 +128,13 @@ const Contacts = (props) => {
           <Grid item container xs={12} sm={12} md={6} spacing={3} justify="center" align="center" className="my-info">
             <Grid item xs align="center" className="my-info__items">
               <ThemeProvider theme={theme}>
-                {/* <div className="my-info__items--content">
-                  <Typography variant="h3" className="my-info__items--title">{t('contacts.personal-info.title')}</Typography>
-                  <Typography variant="h5" paragraph className="my-info__items--content--email">
-                    <EmailIcon className="contact-icon" fontSize="small" />
-                    {t('contacts.personal-email')}
-                  </Typography>
-                  <Typography variant="h5" paragraph className="my-info__items--content--phone">
-                    <PhoneIcon className="contact-icon" fontSize="small" />
-                    {t('contacts.personal-number')}
-                  </Typography>
-                  <Typography variant="h5" paragraph className="my-info__items--content--location">
-                    <LocationCityIcon className="contact-icon" fontSize="small" />
-                    {t('contacts.location')}
-                  </Typography>
-                </div> */}
                 <div className="my-info__contact-info" id="email">
                   <div className="my-info__contact-info--icon">
                     <EmailIcon className="contact-icon" fontSize="large" />
                   </div>
                   <div className="my-info__contact-info--content">
-                    <Typography variant="body2" paragraph className="my-info__items--content--email">olvia.silva@gmail.com</Typography>
-                    <Typography variant="body2" paragraph className="my-info__items--content--email">trabalhasemuito@hotmail.com</Typography>
+                    <Typography variant="body1" paragraph className="my-info__items--content--email">olvia.silva@gmail.com</Typography>
+                    <Typography variant="body1" paragraph className="my-info__items--content--email">trabalhasemuito@hotmail.com</Typography>
                   </div>
                 </div>
                 <div className="my-info__contact-info">
@@ -158,8 +142,8 @@ const Contacts = (props) => {
                     <PhoneIcon className="contact-icon" fontSize="large" />
                   </div>
                   <div className="my-info__contact-info--content">
-                    <Typography variant="body2" paragraph className="my-info__items--content--email">+351 915 565 489</Typography>
-                    <Typography variant="body2" paragraph className="my-info__items--content--email">+351 225 456 654</Typography>
+                    <Typography variant="body1" paragraph className="my-info__items--content--email">+351 915 565 489</Typography>
+                    <Typography variant="body1" paragraph className="my-info__items--content--email">+351 225 456 654</Typography>
                   </div>
                 </div>
                 <div className="division" />

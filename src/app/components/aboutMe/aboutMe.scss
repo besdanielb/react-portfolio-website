@@ -7,8 +7,14 @@ section#aboutMe {
     width: 100vw;
     height: 100vh;
     scroll-snap-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("../../images/headphones-large.webp") no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+        url("../../images/book.webp") no-repeat center center/cover;
+
+    .appbar-root {
+        background-color: transparent;
+        margin-top: 2vw;
+        max-width: 50%;
+    }
 
     .container {
         display: flex;
@@ -18,10 +24,11 @@ section#aboutMe {
         height: calc(100vh - 3.9rem);
 
         .image {
-            width: 360px;
-            height: 400px;
+            width: 420px;
+            height: 580px;
             border-radius: 2%;
             margin-top: 5px;
+            box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
         }
 
         a {
@@ -31,6 +38,10 @@ section#aboutMe {
         .description {
             text-align: justify;
         }
+
+        .PrivateTabIndicator-colorSecondary-24 {
+            background-color: darken($color: skyblue, $amount: 20);
+        }
     }
 
     .title {
@@ -39,7 +50,7 @@ section#aboutMe {
     }
 
     .p {
-        margin-right: 3rem;
+        margin-right: 7rem;
         color: white !important;
     }
 
@@ -56,6 +67,15 @@ section#aboutMe {
 
 @media only screen and (max-width: 768px) {
     section#aboutMe {
+        .appbar-root {
+            max-width: 90%;
+            display: inline-block;
+        }
+
+        .title {
+            font-size: 12vw;
+        }
+
         .container {
             overflow-y: auto;
             overflow-x: unset;
@@ -69,8 +89,8 @@ section#aboutMe {
             }
 
             .image {
-                width: 300px;
-                height: 340px;
+                width: 80vw;
+                height: 70vh;
             }
 
             .description {

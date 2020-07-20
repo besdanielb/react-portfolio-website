@@ -11,6 +11,7 @@ const Contacts = lazy(() => import('./components/contacts/contacts'))
 const Portfolio = lazy(() => import('./components/portfolio/portfolio'))
 const Gallery = lazy(() => import('./components/gallery/gallery'))
 const News = lazy(() => import('./components/news/news'))
+const Media = lazy(() => import('./components/media/media'))
 
 const App = ({ t }) => (
   <div className="container">
@@ -21,6 +22,9 @@ const App = ({ t }) => (
     </Suspense>
     <Suspense fallback={<div />}>
       <Portfolio />
+    </Suspense>
+    <Suspense fallback={<div />}>
+      <Media />
     </Suspense>
     <Suspense fallback={<div />}>
       <Gallery />

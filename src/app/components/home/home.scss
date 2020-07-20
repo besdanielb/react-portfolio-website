@@ -6,13 +6,13 @@ section#home {
     width: 100vw;
     height: 100vh;
     scroll-snap-align: center;
-    background: url("../../images/music-book-large.webp") no-repeat center center/cover;
-    text-shadow: 1px 1px 10px black;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+        url("../../images/plant.webp") no-repeat center center/cover;
+    text-shadow: 1px 1px 1px black;
 
     .MuiTypography-h1 {
         padding-bottom: 1vw !important;
         align-self: center;
-        font-size: 7vw;
         letter-spacing: 1rem;
     }
 
@@ -23,9 +23,24 @@ section#home {
     .MuiTypography-h3 {
         letter-spacing: 0.5rem;
     }
+}
 
-    h1 {
-        font-size: 3em;
-        font-weight: normal;
+@media only screen and (max-width: 960px) {
+    section#home {
+        .MuiTypography-h1 {
+            margin-bottom: 3vw;
+            margin-top: 2vw;
+            align-self: center;
+            letter-spacing: 0.5rem;
+        }
+
+        .MuiTypography-h3 {
+            letter-spacing: 0.1rem;
+        }
+
+        .MuiTypography-h4 {
+            letter-spacing: 0.2rem;
+            text-align: center;
+        }
     }
 }
