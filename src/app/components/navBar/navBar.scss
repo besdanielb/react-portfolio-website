@@ -6,7 +6,44 @@ div#navbar {
     height: 3.5rem;
     background: transparent;
     align-items: center;
-    justify-content: center;
+
+    .navbar {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        flex: 3;
+
+        &__item {
+            &--link {
+                transition: all 0.3s ease 0s;
+                margin-right: 2vw;
+
+                &:hover {
+                    color: #0088a9;
+                }
+            }
+        }
+    }
+
+    li,
+    a {
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .border {
+        position: absolute;
+        border-bottom: 2px solid red;
+    }
+
+    .language-button-container {
+        position: absolute;
+        right: 0;
+        margin-right: 2vw;
+    }
 
     .MuiButton-root {
         color: white;
@@ -14,22 +51,21 @@ div#navbar {
         font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
         &:hover {
-            color: skyblue;
+            color: #0088a9;
         }
-    }
-
-    .MuiListItem-button:hover {
-        color: skyblue;
-    }
-
-    .MuiListItemIcon-root {
-        color: white;
     }
 
     .menuIcon {
         margin-left: 3vw;
     }
 }
+
+.download-button {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+}
+
 .MuiPaper-root {
     width: 8rem;
 }

@@ -15,14 +15,15 @@ theme = responsiveFontSizes(theme)
 const AboutMe = (props) => {
   const { t } = props
   return (
-    <section className="aboutMe" id="aboutMe" name="aboutMe">
+    <section id="aboutMe">
       <div className="container">
         <ThemeProvider theme={theme}>
           <Grid container>
-            <Grid item container xs={12} md={4} style={{ height: '-webkit-fill-available', alignContent: 'center' }}>
+            <Grid item container xs={12} lg={4} className="image-container">
               <Grid item xs>
                 <Grid item align="center">
-                  <img src={image} alt="looking at computer" className="image" />
+                  {/* Photo by Hunter Newton on Unsplash */}
+                  <img src={image} alt="looking at computer" className="image" viewBox="0 0 420 580" />
                 </Grid>
                 <Grid item xs style={{ height: 'fit-content', marginTop: '1rem' }}>
                   <Hidden mdDown>
@@ -36,8 +37,8 @@ const AboutMe = (props) => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item container xs={12} md={8} alignContent="center" className="description" style={{ height: '-webkit-fill-available', alignContent: 'baseline' }}>
-              <Grid item container xs={12} md={8} justify="flex-end" alignContent="flex-end" style={{ height: '10vw', marginBottom: '2rem' }}>
+            <Grid item container xs={12} lg={8} alignContent="center" className="description" style={{ height: '-webkit-fill-available', alignContent: 'baseline' }}>
+              <Grid item container xs={12} sm={12} md={8} justify="flex-end" alignContent="flex-end" style={{ height: '10vw', marginBottom: '2rem' }}>
                 <Grid item align="left" xs={12} className="title-container">
                   <Typography variant="h3" className="title">{t('aboutMe.title')}</Typography>
                 </Grid>

@@ -25,6 +25,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import MailIcon from '@material-ui/icons/Mail'
+import GetAppIcon from '@material-ui/icons/GetApp'
 import { makeStyles } from '@material-ui/core/styles'
 import i18n from '../../../i18n'
 
@@ -86,31 +87,50 @@ const NavBar = (props) => {
           <MenuIcon className="menuIcon" onClick={handleDrawerToggle} />
         </Hidden>
         <Hidden smDown>
-          <Button href="#home">{t('navBar.home')}</Button>
-          <Button href="#aboutMe">{t('navBar.aboutMe')}</Button>
-          <Button href="#portfolio">{t('navBar.portfolio')}</Button>
-          <Button href="#media">{t('navBar.media')}</Button>
-          <Button href="#gallery">{t('navBar.gallery')}</Button>
-          <Button href="#news">{t('navBar.news')}</Button>
-          <Button href="#contacts">{t('navBar.contacts')}</Button>
+          <ul className="navbar">
+            <li className="navbar__item active">
+              <a data-page="home" className="navbar__item--link scroll active" href="#home" id="button-home">{t('navBar.home')}</a>
+            </li>
+            <li className="navbar__item">
+              <a data-page="aboutMe" className="navbar__item--link scroll" href="#aboutMe" id="button-aboutMe">{t('navBar.aboutMe')}</a>
+            </li>
+            <li className="navbar__item">
+              <a data-page="portfolio" className="navbar__item--link scroll" href="#portfolio">{t('navBar.portfolio')}</a>
+            </li>
+            <li className="navbar__item">
+              <a data-page="media" className="navbar__item--link scroll" href="#media">{t('navBar.media')}</a>
+            </li>
+            <li className="navbar__item">
+              <a data-page="gallery" className="navbar__item--link scroll" href="#gallery">{t('navBar.gallery')}</a>
+            </li>
+            <li className="navbar__item">
+              <a data-page="news" className="navbar__item--link scroll" href="#news">{t('navBar.news')}</a>
+            </li>
+            <li className="navbar__item">
+              <a data-page="contacts" className="navbar__item--link scroll" href="#contacts">{t('navBar.contacts')}</a>
+            </li>
+            <div className="border" />
+          </ul>
         </Hidden>
-        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-          <TranslateOutlinedIcon />
-          {currentLanguageLabel}
-          <ExpandMoreOutlinedIcon />
-        </Button>
-        <Menu
-          style={{ top: '2rem', width: '12rem' }}
-          id="simple-menu"
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          keepMounted
-          variant="menu"
-          onClose={handleClose}
-        >
-          <MenuItem onClick={() => changeLanguage('en')}>English</MenuItem>
-          <MenuItem onClick={() => changeLanguage('pt')}>Português</MenuItem>
-        </Menu>
+        <div className="language-button-container">
+          <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+            <TranslateOutlinedIcon />
+            {currentLanguageLabel}
+            <ExpandMoreOutlinedIcon />
+          </Button>
+          <Menu
+            style={{ top: '2rem', width: '12rem' }}
+            id="simple-menu"
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            keepMounted
+            variant="menu"
+            onClose={handleClose}
+          >
+            <MenuItem onClick={() => changeLanguage('en')}>English</MenuItem>
+            <MenuItem onClick={() => changeLanguage('pt')}>Português</MenuItem>
+          </Menu>
+        </div>
       </div>
       <nav className={classes.drawer} aria-label="mailbox folders">
         <Hidden smUp implementation="css">
@@ -153,6 +173,10 @@ const NavBar = (props) => {
                 <ListItemLink href="#contacts" onClick={handleDrawerToggle}>
                   <ListItemIcon><MailIcon /></ListItemIcon>
                   <ListItemText primary={t('navBar.contacts')} />
+                </ListItemLink>
+                <ListItemLink href="/files/cv.txt" download className="download-button">
+                  <ListItemIcon><GetAppIcon /></ListItemIcon>
+                  <ListItemText primary={t('aboutMe.downloadCV')} />
                 </ListItemLink>
               </List>
             </div>

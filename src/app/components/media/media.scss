@@ -12,6 +12,11 @@ section#media {
         padding: 5vw;
         align-self: center;
     }
+
+    .video-player {
+        height: 100%;
+    }
+
     .container {
         display: flex;
         background: unset;
@@ -24,7 +29,7 @@ section#media {
     }
 
     .iframe {
-        height: 30vh;
+        height: 200px;
         width: 100%;
         border-radius: 10px;
         box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
@@ -33,6 +38,11 @@ section#media {
 
 @media only screen and (max-width: 960px) {
     section#media {
+        .video-player {
+            width: 100% !important;
+            height: 100%;
+        }
+
         .container {
             overflow-y: scroll;
         }
