@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import './contacts.scss'
+import './contacts.css'
 import { withNamespaces } from 'react-i18next'
 import { makeStyles, ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'

@@ -37,10 +37,10 @@ const AboutMe = (props) => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item container xs={12} lg={8} alignContent="center" className="description" style={{ height: '-webkit-fill-available', alignContent: 'baseline' }}>
+            <Grid item container xs={12} lg={8} alignContent="center" className="description">
               <Grid item container xs={12} sm={12} md={8} justify="flex-end" alignContent="flex-end" style={{ height: '10vw', marginBottom: '2rem' }}>
                 <Grid item align="left" xs={12} className="title-container">
-                  <Typography variant="h3" className="title">{t('aboutMe.title')}</Typography>
+                  <Typography variant="h2" className="title">{t('aboutMe.title')}</Typography>
                 </Grid>
               </Grid>
               <Grid item align="left" xs={12} className="title-container">

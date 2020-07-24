@@ -12,6 +12,14 @@ section#gallery {
 
     .alice-carousel {
         width: 90%;
+        margin-bottom: 9vh;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        margin-top: 3rem;
     }
 
     .alice-carousel__stage-item {
@@ -34,20 +42,20 @@ section#gallery {
         background-color: skyblue;
     }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3.9rem;
+        height: calc(100vh - 3.9rem);
+    }
+
     .image-container {
         width: 100%;
-        height: 60vh;
+        height: 50vh;
         border-radius: 10px;
+        overflow: hidden;
         position: relative;
-
-        &:hover .sliderimg--description {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        &:hover .sliderimg {
-            box-shadow: "0 0 40px 5px rgba(0, 0, 0, 0.3)";
-        }
+        cursor: pointer;
     }
 
     .sliderimg {
@@ -56,35 +64,72 @@ section#gallery {
         border-radius: 6px;
         object-fit: cover;
         position: relative;
-        transition: transform 0.1s, opacity 0.4s, visibility 0.4s;
+        transition: all 0.3s ease-out;
+    }
 
-        &--description {
-            display: block;
+    .modal {
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.25s ease-out;
+        z-index: 999;
+
+        &.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        p {
+            color: white;
+            font-size: 2rem;
             position: absolute;
-            height: 100%;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
-            color: #fff;
-            border-radius: 6px;
-            visibility: hidden;
-            opacity: 0;
-            transition: transform 0.8s, opacity 0.5s, visibility 0.5s;
-            text-align: left;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -5%);
+        }
 
-            &__title {
-                font-weight: bold;
-                position: absolute;
-                bottom: 12%;
-                margin: 1rem;
-            }
+        .full-img {
+            position: absolute;
+            height: 70%;
+            top: 13%;
+            border-radius: 15px;
+            left: 50%;
+            transform: translate(-50%, 5%) scale(0.5);
+            transition: all 0.25s ease-out;
 
-            &__description {
-                position: absolute;
-                bottom: 5%;
-                margin: 1rem;
+            &.open {
+                transform: translate(-50%, 5%) scale(1);
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    section#gallery {
+        .modal .full-img {
+            display: flex;
+            max-width: 90%;
+            max-height: 70%;
+            object-fit: cover;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    section#gallery {
+        .modal .full-img {
+            display: flex;
+            max-width: 90%;
+            max-height: 40%;
+            object-fit: cover;
+            box-sizing: border-box;
+            top: 30%;
         }
     }
 }

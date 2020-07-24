@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import './home.scss'
+import './home.css'
 import { withNamespaces } from 'react-i18next'
 import { Typography } from '@material-ui/core'
 import { createMuiTheme, MuiThemeProvider, responsiveFontSizes } from '@material-ui/core/styles'

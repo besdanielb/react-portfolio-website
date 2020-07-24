@@ -20,7 +20,11 @@ const News = (props) => {
       <div className="container">
         <MuiThemeProvider theme={theme}>
           <Grid container justify="center" alignItems="center" spacing={3}>
+            <Grid item xs={12} align="center">
+              <Typography variant="h2" className="title">{t('news.title')}</Typography>
+            </Grid>
             <Grid item xs={12} md={6} lg={4} align="center">
+
               <div className="image-container">
                 <a target="_blank" rel="noopener noreferrer" href="http://www.google.com">
                   <img src={firstNewsImage} className="image" alt="first news" />

@@ -1,0 +1,76 @@
+section#media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.6))), url("../../images/book.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../../images/book.webp") no-repeat center center/cover;
+}
+
+section#media .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  margin-top: 2.5rem;
+}
+
+section#media .grid-container {
+  padding: 3vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+section#media .video-container {
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+section#media .video-player {
+  height: 100%;
+}
+
+section#media .container {
+  margin-top: 3.9rem;
+  height: calc(100vh - 3.9rem);
+  overflow-y: hidden;
+  width: 100%;
+}
+
+section#media .iframe {
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 960px) {
+  section#media .video-player {
+    width: 100% !important;
+    height: 100%;
+  }
+  section#media .container {
+    overflow-y: scroll;
+  }
+  section#media .grid-container {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  section#media .video-container {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+/*# sourceMappingURL=media.css.map */

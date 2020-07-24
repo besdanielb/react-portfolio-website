@@ -1,0 +1,183 @@
+section#contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url("../../images/table.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../../images/table.webp") no-repeat center center/cover;
+}
+
+section#contacts .MuiButton-root {
+  color: white;
+  border-color: white;
+}
+
+section#contacts .MuiButton-root:hover {
+  color: skyblue;
+  border-color: skyblue;
+}
+
+section#contacts .send-icon {
+  margin-left: 5px;
+  font-size: 1rem;
+}
+
+section#contacts .MuiFormControl-root {
+  width: 100%;
+}
+
+section#contacts .contact-icon {
+  vertical-align: sub;
+}
+
+section#contacts .division {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  min-width: 300px;
+  width: 45%;
+}
+
+section#contacts .link-icons {
+  padding-top: 0.5vw;
+}
+
+section#contacts .link-icons > * {
+  color: white;
+  margin-right: 0.5vw;
+}
+
+section#contacts .link-icons > *:hover:nth-child(1) {
+  color: #387dff;
+}
+
+section#contacts .link-icons > *:hover:nth-child(2) {
+  color: #c13584;
+}
+
+section#contacts .link-icons > *:hover:nth-child(3) {
+  color: #389bff;
+}
+
+section#contacts .link-icons > *:hover:nth-child(4) {
+  color: red;
+}
+
+section#contacts .my-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#contacts .my-info__items {
+  justify-items: center;
+}
+
+section#contacts .my-info__items--title {
+  text-align: initial;
+  margin-bottom: 72px;
+}
+
+section#contacts .my-info__items--content {
+  max-width: 80%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+section#contacts .my-info__items--content--email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+}
+
+section#contacts .my-info__items--content--phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+section#contacts .my-info__items--content--location {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#contacts .my-info__contact-info {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+  padding: 54px 20px 50px;
+  width: 18rem;
+  height: 11rem;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+}
+
+section#contacts .my-info__contact-info#email {
+  margin-bottom: 4rem;
+}
+
+section#contacts .my-info__contact-info--icon {
+  border: 1px solid #ebebeb;
+  width: 65px;
+  height: 65px;
+  color: red;
+  line-height: 63px;
+  text-align: center;
+  border-radius: 100%;
+  background: #fff;
+  font-size: 28px;
+  position: absolute;
+  top: -31px;
+  left: 47px;
+}
+
+@media only screen and (max-width: 960px) {
+  section#contacts .my-info {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-top: 8vw;
+  }
+  section#contacts .my-info__items--title {
+    text-align: center;
+    margin-bottom: 4vw;
+  }
+  section#contacts .my-info__contact-info {
+    margin-top: 12vh;
+  }
+  section#contacts .division {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=contacts.css.map */

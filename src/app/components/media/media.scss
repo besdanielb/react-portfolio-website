@@ -6,11 +6,22 @@ section#media {
     scroll-snap-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
         url("../../images/book.webp") no-repeat center center/cover;
-    text-shadow: 1px 1px 15px black;
+
+    .title {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        margin-top: 2.5rem;
+    }
 
     .grid-container {
-        padding: 5vw;
+        padding: 3vw;
         align-self: center;
+    }
+
+    .video-container {
+        margin-bottom: 3rem;
+        margin-top: 1rem;
     }
 
     .video-player {
@@ -18,10 +29,6 @@ section#media {
     }
 
     .container {
-        display: flex;
-        background: unset;
-        align-self: center;
-        align-items: center;
         margin-top: 3.9rem;
         height: calc(100vh - 3.9rem);
         overflow-y: hidden;
@@ -49,6 +56,11 @@ section#media {
 
         .grid-container {
             align-self: end;
+        }
+
+        .video-container {
+            margin-bottom: 1rem;
+            margin-top: 1rem;
         }
     }
 }

@@ -1,0 +1,166 @@
+section#gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.8))), url("../../images/shapes.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("../../images/shapes.webp") no-repeat center center/cover;
+}
+
+section#gallery .alice-carousel {
+  width: 90%;
+  margin-bottom: 9vh;
+}
+
+section#gallery .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+section#gallery .alice-carousel__stage-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section#gallery .alice-carousel__prev-btn-item,
+section#gallery .alice-carousel__next-btn-item {
+  color: white;
+}
+
+section#gallery .alice-carousel__prev-btn-item:hover,
+section#gallery .alice-carousel__next-btn-item:hover {
+  color: skyblue;
+}
+
+section#gallery .alice-carousel__dots-item:hover,
+section#gallery .alice-carousel__dots-item.__active {
+  background-color: skyblue;
+}
+
+section#gallery .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3.9rem;
+  height: calc(100vh - 3.9rem);
+}
+
+section#gallery .image-container {
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+section#gallery .sliderimg {
+  width: 100%;
+  height: 65vh;
+  border-radius: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+section#gallery .modal {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+  z-index: 999;
+}
+
+section#gallery .modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+section#gallery .modal p {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -5%);
+          transform: translate(-50%, -5%);
+}
+
+section#gallery .modal .full-img {
+  position: absolute;
+  height: 70%;
+  top: 13%;
+  border-radius: 15px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 5%) scale(0.5);
+          transform: translate(-50%, 5%) scale(0.5);
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+section#gallery .modal .full-img.open {
+  -webkit-transform: translate(-50%, 5%) scale(1);
+          transform: translate(-50%, 5%) scale(1);
+}
+
+@media only screen and (max-width: 1024px) {
+  section#gallery .modal .full-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 90%;
+    max-height: 70%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  section#gallery .modal .full-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 90%;
+    max-height: 40%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    top: 30%;
+  }
+}
+/*# sourceMappingURL=gallery.css.map */

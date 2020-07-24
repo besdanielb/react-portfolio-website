@@ -1,0 +1,94 @@
+div#navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 3.5rem;
+  background: transparent;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div#navbar .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+div#navbar .navbar__item--link {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-right: 2vw;
+}
+
+div#navbar .navbar__item--link:hover {
+  color: #0088a9;
+}
+
+div#navbar li,
+div#navbar a {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+}
+
+div#navbar .border {
+  position: absolute;
+  border-bottom: 2px solid red;
+}
+
+div#navbar .language-button-container {
+  position: absolute;
+  right: 0;
+  margin-right: 2vw;
+}
+
+div#navbar .MuiButton-root {
+  color: white;
+  height: 100%;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+div#navbar .MuiButton-root:hover {
+  color: #0088a9;
+}
+
+div#navbar .menuIcon {
+  margin-left: 3vw;
+}
+
+.download-button {
+  text-decoration: none;
+  color: inherit;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.MuiPaper-root {
+  width: 8rem;
+}
+
+@media only screen and (max-width: 768px) {
+  div#navbar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  div#navbar .MuiButton-root:hover {
+    color: white;
+  }
+}
+/*# sourceMappingURL=navBar.css.map */
