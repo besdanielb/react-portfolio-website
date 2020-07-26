@@ -16,8 +16,8 @@ section#news {
   width: 100vw;
   height: 100vh;
   scroll-snap-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("../../images/newspapers.webp") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../../images/newspapers.webp") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.6))), url("../../images/newspapers.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../../images/newspapers.webp") no-repeat center center/cover;
 }
 
 section#news .container {
@@ -33,7 +33,7 @@ section#news .container {
 }
 
 section#news .container .image-container {
-  height: 600px;
+  height: 65vh;
   width: 400px;
   position: relative;
   cursor: pointer;
@@ -56,7 +56,7 @@ section#news .container .title {
 }
 
 section#news .container .image {
-  height: 600px;
+  height: 65vh;
   width: 400px;
   border-radius: 6px;
   -webkit-box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
@@ -110,6 +110,12 @@ section#news .container .image--description__icon {
 
 section#news .MuiTypography-h1 {
   padding-bottom: 2vw !important;
+}
+
+@media only screen and (max-width: 1600px) {
+  section#news .container {
+    overflow: auto;
+  }
 }
 
 @media only screen and (max-width: 768px) {

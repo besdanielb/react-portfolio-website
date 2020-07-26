@@ -7,12 +7,11 @@ section#portfolio {
     height: 100vh;
     scroll-snap-align: center;
     // Photo by iMattSmart on Unsplash
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
         url("../../images/table-with-keyboard.webp") no-repeat center center/cover;
 
     .alice-carousel {
         width: 90%;
-        margin-bottom: 3vh;
     }
 
     .title {
@@ -104,6 +103,15 @@ section#portfolio {
                 right: 2%;
                 bottom: 2%;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    section#portfolio {
+        .title {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
     }
 }

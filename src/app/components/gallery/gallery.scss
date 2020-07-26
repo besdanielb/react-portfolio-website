@@ -7,7 +7,7 @@ section#gallery {
     height: 100vh;
     scroll-snap-align: center;
     // Photo by Shapelined on Unsplash
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
         url("../../images/shapes.webp") no-repeat center center/cover;
 
     .alice-carousel {
@@ -105,6 +105,15 @@ section#gallery {
             &.open {
                 transform: translate(-50%, 5%) scale(1);
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    section#gallery {
+        .alice-carousel {
+            width: 90%;
+            margin-bottom: 3vh;
         }
     }
 }

@@ -8,7 +8,7 @@ section#news {
     height: 100vh;
     scroll-snap-align: center;
     //Photo by AbsolutVision on Unsplash
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
         url("../../images/newspapers.webp") no-repeat center center/cover;
 
     .container {
@@ -20,7 +20,7 @@ section#news {
         overflow: hidden;
 
         .image-container {
-            height: 600px;
+            height: 65vh;
             width: 400px;
             position: relative;
             cursor: pointer;
@@ -41,7 +41,7 @@ section#news {
         }
 
         .image {
-            height: 600px;
+            height: 65vh;
             width: 400px;
             border-radius: 6px;
             box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
@@ -87,6 +87,14 @@ section#news {
 
     .MuiTypography-h1 {
         padding-bottom: 2vw !important;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    section#news {
+        .container {
+            overflow: auto;
+        }
     }
 }
 

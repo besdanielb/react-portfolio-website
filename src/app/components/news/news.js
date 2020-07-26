@@ -19,7 +19,7 @@ const News = (props) => {
     <section id="news">
       <div className="container">
         <MuiThemeProvider theme={theme}>
-          <Grid container justify="center" alignItems="center" spacing={3}>
+          <Grid container justify="center" alignItems="center">
             <Grid item xs={12} align="center">
               <Typography variant="h2" className="title">{t('news.title')}</Typography>
             </Grid>

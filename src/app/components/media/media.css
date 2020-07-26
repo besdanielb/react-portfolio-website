@@ -43,7 +43,7 @@ section#media .video-player {
 section#media .container {
   margin-top: 3.9rem;
   height: calc(100vh - 3.9rem);
-  overflow-y: hidden;
+  overflow: auto;
   width: 100%;
 }
 
@@ -53,6 +53,26 @@ section#media .iframe {
   border-radius: 10px;
   -webkit-box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 1600px) {
+  section#media .video-player {
+    height: 300px !important;
+  }
+  section#media .video-container {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  section#media .title {
+    margin-top: 1rem;
+  }
+  section#media .iframe {
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media only screen and (max-width: 960px) {

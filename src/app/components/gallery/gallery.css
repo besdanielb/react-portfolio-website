@@ -15,8 +15,8 @@ section#gallery {
   width: 100vw;
   height: 100vh;
   scroll-snap-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.8))), url("../../images/shapes.webp") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("../../images/shapes.webp") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.6))), url("../../images/shapes.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../../images/shapes.webp") no-repeat center center/cover;
 }
 
 section#gallery .alice-carousel {
@@ -133,6 +133,13 @@ section#gallery .modal .full-img {
 section#gallery .modal .full-img.open {
   -webkit-transform: translate(-50%, 5%) scale(1);
           transform: translate(-50%, 5%) scale(1);
+}
+
+@media only screen and (max-width: 1600px) {
+  section#gallery .alice-carousel {
+    width: 90%;
+    margin-bottom: 3vh;
+  }
 }
 
 @media only screen and (max-width: 1024px) {

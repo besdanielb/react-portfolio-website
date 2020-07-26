@@ -31,7 +31,7 @@ section#media {
     .container {
         margin-top: 3.9rem;
         height: calc(100vh - 3.9rem);
-        overflow-y: hidden;
+        overflow: auto;
         width: 100%;
     }
 
@@ -40,6 +40,30 @@ section#media {
         width: 100%;
         border-radius: 10px;
         box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    section#media {
+        .video-player {
+            height: 300px !important;
+        }
+
+        .video-container {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .title {
+            margin-top: 1rem;
+        }
+
+        .iframe {
+            height: 150px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+        }
     }
 }
 
