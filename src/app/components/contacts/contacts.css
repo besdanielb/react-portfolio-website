@@ -163,6 +163,9 @@ section#contacts .my-info__contact-info--icon {
 }
 
 @media only screen and (max-width: 960px) {
+  section#contacts .form-container {
+    height: auto;
+  }
   section#contacts .my-info {
     -webkit-box-align: end;
         -ms-flex-align: end;

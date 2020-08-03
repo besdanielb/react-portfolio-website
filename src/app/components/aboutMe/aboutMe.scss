@@ -41,6 +41,10 @@ section#aboutMe {
             box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
         }
 
+        .grid-container {
+            padding-left: 5vw;
+        }
+
         a {
             text-decoration: none;
         }
@@ -65,16 +69,6 @@ section#aboutMe {
         margin-right: 7rem;
         color: white !important;
     }
-
-    .MuiButton-root {
-        color: white;
-        border-color: white;
-
-        &:hover {
-            color: skyblue;
-            border-color: skyblue;
-        }
-    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -83,25 +77,12 @@ section#aboutMe {
             font-size: 7vw;
         }
 
+        .appbar-root {
+            max-width: 90%;
+            margin-top: 3rem;
+        }
+
         .container {
-            .image {
-                width: 60vw;
-                height: 65vh;
-            }
-            .image-container {
-                margin-top: 2rem;
-                align-content: center;
-            }
-
-            .description {
-                justify-content: center;
-                margin: 3rem;
-            }
-
-            .p {
-                font-size: 2vw;
-                margin: 1rem;
-            }
         }
     }
 }
@@ -123,7 +104,6 @@ section#aboutMe {
             }
 
             .p {
-                font-size: 2vw !important;
                 margin: 1rem;
             }
         }
@@ -133,7 +113,14 @@ section#aboutMe {
 @media only screen and (max-width: 768px) {
     section#aboutMe {
         .title {
-            font-size: 10vw;
+            font-size: 7vw;
+            margin-top: 2rem;
+        }
+
+        .appbar-root {
+            max-width: 85%;
+            margin-top: 3rem;
+            display: inline-block;
         }
 
         .container {
@@ -142,9 +129,23 @@ section#aboutMe {
                 height: 60vh;
             }
 
+            .description {
+                justify-content: center;
+                margin: 0;
+                height: auto;
+                padding-left: 0;
+            }
+
             .p {
-                font-size: 3vw !important;
                 margin: 1rem;
+            }
+
+            .image-container {
+                height: auto;
+            }
+
+            .grid-container {
+                padding-left: 0;
             }
         }
     }
@@ -165,11 +166,21 @@ section#aboutMe {
             .description {
                 justify-content: center;
                 margin: 0;
+                height: auto;
+                padding-left: 0;
             }
             .image {
                 width: 70vw;
                 height: 45vh;
                 margin-bottom: 2rem;
+            }
+
+            .image-container {
+                height: auto;
+            }
+
+            .grid-container {
+                padding-left: 0;
             }
         }
     }

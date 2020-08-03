@@ -65,7 +65,7 @@ const Contacts = (props) => {
               <Typography variant="h3" paragraph>{t('contacts.title')}</Typography>
             </ThemeProvider>
           </Grid>
-          <Grid item container xs spacing={3} style={{ height: '80%' }}>
+          <Grid item container xs spacing={3} className="form-container" style={{ height: '90%' }}>
             <Grid item xs={12} md={6}>
               <TextField
                 required
@@ -126,7 +126,7 @@ const Contacts = (props) => {
             </Grid>
           </Grid>
           <Grid item container xs={12} sm={12} md={6} spacing={3} justify="center" align="center" className="my-info">
-            <Grid item xs align="center" className="my-info__items">
+            <Grid item align="center" className="my-info__items">
               <ThemeProvider theme={theme}>
                 <div className="my-info__contact-info" id="email">
                   <div className="my-info__contact-info--icon">

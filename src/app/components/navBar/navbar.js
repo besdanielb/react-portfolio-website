@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable object-curly-newline */
 import React from 'react'
-import './navBar.scss'
+import './navBar.css'
 import Button from '@material-ui/core/Button'
 import i18next from 'i18next'
 import Menu from '@material-ui/core/Menu'

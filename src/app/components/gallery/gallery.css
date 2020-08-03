@@ -90,7 +90,7 @@ section#gallery .sliderimg {
 }
 
 section#gallery .modal {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -143,12 +143,18 @@ section#gallery .modal .full-img.open {
 }
 
 @media only screen and (max-width: 1024px) {
+  section#gallery p {
+    font-size: 1rem;
+  }
   section#gallery .modal .full-img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     max-width: 90%;
     max-height: 70%;
+    width: 100%;
+    top: 23%;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-box-sizing: border-box;
@@ -157,17 +163,25 @@ section#gallery .modal .full-img.open {
 }
 
 @media only screen and (max-width: 450px) {
+  section#gallery .modal p {
+    font-size: 1rem;
+  }
   section#gallery .modal .full-img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 90%;
-    max-height: 40%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 100%;
+    height: auto;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     top: 30%;
+  }
+  section#gallery .title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  section#gallery .image-container {
+    height: 60vh;
   }
 }
 /*# sourceMappingURL=gallery.css.map */

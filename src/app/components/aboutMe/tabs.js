@@ -56,7 +56,8 @@ const FullWidthTabs = (props) => {
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
-          variant="fullWidth"
+          variant="scrollable"
+          scrollButtons="on"
           aria-label="full width tabs example"
         >
           <Tab style={{ fontWeight: 'bold' }} label={t('aboutMe.tab1')} {...a11yProps(0)} />

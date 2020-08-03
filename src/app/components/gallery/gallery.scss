@@ -68,7 +68,7 @@ section#gallery {
     }
 
     .modal {
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.9);
         position: fixed;
         top: 0;
         left: 0;
@@ -120,10 +120,17 @@ section#gallery {
 
 @media only screen and (max-width: 1024px) {
     section#gallery {
+        p {
+            font-size: 1rem;
+        }
+
         .modal .full-img {
             display: flex;
             max-width: 90%;
             max-height: 70%;
+            width: 100%;
+            top: 23%;
+            height: auto;
             object-fit: cover;
             box-sizing: border-box;
         }
@@ -132,13 +139,27 @@ section#gallery {
 
 @media only screen and (max-width: 450px) {
     section#gallery {
-        .modal .full-img {
-            display: flex;
-            max-width: 90%;
-            max-height: 40%;
-            object-fit: cover;
-            box-sizing: border-box;
-            top: 30%;
+        .modal {
+            p {
+                font-size: 1rem;
+            }
+
+            .full-img {
+                display: flex;
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                top: 30%;
+            }
+        }
+
+        .title {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .image-container {
+            height: 60vh;
         }
     }
 }

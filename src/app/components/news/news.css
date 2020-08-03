@@ -129,6 +129,9 @@ section#news .MuiTypography-h1 {
 }
 
 @media only screen and (max-width: 450px) {
+  section#news .title {
+    margin-bottom: 2rem;
+  }
   section#news .container .image-container {
     height: 85%;
     width: 90%;

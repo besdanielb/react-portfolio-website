@@ -134,6 +134,10 @@ section#contacts {
 
 @media only screen and (max-width: 960px) {
     section#contacts {
+        .form-container {
+            height: auto;
+        }
+
         .my-info {
             align-items: flex-end;
             margin-top: 8vw;
