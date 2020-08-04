@@ -4,20 +4,22 @@ section#contacts {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   width: 100vw;
   height: 100vh;
   scroll-snap-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.3))), url("../../images/table.webp") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("../../images/table.webp") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.3))),
+    url("../../images/table.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url("../../images/table.webp") no-repeat center center/cover;
 }
 
 section#contacts .MuiButton-root {
@@ -110,7 +112,7 @@ section#contacts .my-info__items--content--text {
 
 section#contacts .my-info__contact-info {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 1px solid #ebebeb;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
@@ -120,16 +122,16 @@ section#contacts .my-info__contact-info {
   height: 10rem;
   margin-bottom: 2rem;
   -webkit-box-shadow: 0px 10px 55px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 10px 55px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 55px rgba(0, 0, 0, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 section#contacts .my-info__contact-info#email {
@@ -157,8 +159,8 @@ section#contacts .my-info__contact-info--icon {
   }
   section#contacts .my-info {
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     margin-top: 8vw;
   }
   section#contacts .my-info__items--title {

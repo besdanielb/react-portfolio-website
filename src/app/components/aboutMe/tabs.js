@@ -37,6 +37,9 @@ function a11yProps(index) {
   }
 }
 
+/**
+ * Material Ui tab component config
+ */
 const FullWidthTabs = (props) => {
   const { t } = props
   const theme = useTheme()

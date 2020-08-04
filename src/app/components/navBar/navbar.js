@@ -48,12 +48,16 @@ const useStyles = makeStyles((theme) => ({
   content: { flexGrow: 1, padding: theme.spacing(3) },
 }))
 
+/**
+ * Navigation bar component
+ */
 const NavBar = (props) => {
   const { t, window } = props
   const classes = useStyles()
   const [anchorEl, setAnchorEl] = React.useState(null)
   const [mobileOpen, setMobileOpen] = React.useState(false)
 
+  // Get the current language text to show on the main language button label depending on the current language
   const getCurrentLanguageLabel = () => {
     if (i18next.language === 'en') {
       return 'English'
@@ -132,7 +136,7 @@ const NavBar = (props) => {
                 className="navbar__item--link scroll"
                 href="#media"
               >
-                {t('navBar.media')}
+                {t('navBar.video')}
               </a>
             </li>
             <li className="navbar__item">
@@ -184,6 +188,7 @@ const NavBar = (props) => {
             variant="menu"
             onClose={handleClose}
           >
+            {/*  Language labels. Edit this according to your language options */}
             <MenuItem onClick={() => changeLanguage('en')}>English</MenuItem>
             <MenuItem onClick={() => changeLanguage('pt')}>Português</MenuItem>
           </Menu>
@@ -230,7 +235,7 @@ const NavBar = (props) => {
                   <ListItemIcon>
                     <AudiotrackIcon />
                   </ListItemIcon>
-                  <ListItemText primary={t('navBar.media')} />
+                  <ListItemText primary={t('navBar.video')} />
                 </ListItemLink>
                 <ListItemLink href="#gallery" onClick={handleDrawerToggle}>
                   <ListItemIcon>

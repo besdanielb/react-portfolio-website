@@ -3,7 +3,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
 import React, { useEffect } from 'react'
 import './gallery.css'
 import { withNamespaces } from 'react-i18next'
@@ -23,6 +22,10 @@ let modal
 let original
 let caption
 
+/**
+ * Gallery page component
+ * Image array is found on galleryData.js file
+ */
 const Gallery = (props) => {
   const { i18n, t } = props
   const responsive = {

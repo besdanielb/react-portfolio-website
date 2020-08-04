@@ -13,7 +13,7 @@ const Contacts = lazy(() => import('./components/contacts/contacts'))
 const Portfolio = lazy(() => import('./components/portfolio/portfolio'))
 const Gallery = lazy(() => import('./components/gallery/gallery'))
 const News = lazy(() => import('./components/news/news'))
-const Media = lazy(() => import('./components/video/video'))
+const Video = lazy(() => import('./components/video/video'))
 
 class App extends React.Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class App extends React.Component {
           <Portfolio />
         </Suspense>
         <Suspense fallback={<div />}>
-          <Media />
+          <Video />
         </Suspense>
         <Suspense fallback={<div />}>
           <Gallery />

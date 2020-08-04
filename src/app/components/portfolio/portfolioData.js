@@ -1,6 +1,9 @@
 import plantImage from '../../images/plant.webp'
 import tableImage from '../../images/table.webp'
 
+/**
+ * Portfolio info
+ */
 const portfolioData = [
   {
     image: plantImage,

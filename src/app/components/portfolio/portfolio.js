@@ -18,8 +18,13 @@ import portfolioData from './portfolioData'
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
 
+/**
+ * Portfolio page component
+ * Portfolio config array can be found on portfolioData.js file
+ */
 const Portfolio = (props) => {
   const { t, i18n } = props
+  // Number of cards to show depending on the screen size
   const responsive = {
     0: { items: 1 },
     600: { items: 2 },

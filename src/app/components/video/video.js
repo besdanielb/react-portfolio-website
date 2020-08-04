@@ -13,7 +13,10 @@ import {
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
 
-const Media = (props) => {
+/**
+ * Video page component
+ */
+const Video = (props) => {
   const { t } = props
   return (
     <section id="media">
@@ -27,6 +30,7 @@ const Media = (props) => {
           <Grid item xs={12} align="center" className="video-container">
             <ReactPlayer
               className="video-player"
+              /* Youtube video url */
               url="https://www.youtube.com/watch?v=2lAe1cqCOXo"
             />
           </Grid>
@@ -36,4 +40,4 @@ const Media = (props) => {
   )
 }
 
-export default withNamespaces()(Media)
+export default withNamespaces()(Video)

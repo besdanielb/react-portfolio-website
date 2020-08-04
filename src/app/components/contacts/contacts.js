@@ -56,20 +56,26 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
+/**
+ * Contact Me page component
+ */
 const Contacts = (props) => {
   const { t } = props
   const classes = useStyles()
   const { register, handleSubmit } = useForm()
 
+  // For the email service we decided to use EmailJS to facilitate this process. To associate your email adress to use this service follow this steps:
+  // - Create and account on Emailjs (https://www.emailjs.com/) and add the email service (Gmail in the example bellow)
+  // - Go to email templates and you can edit the sample email template
+  // - And then just paste your user info bellow. That's it!
   const onSubmit = (data, e) => {
     e.preventDefault()
-    // For a simple set by step explanation watch: https://www.youtube.com/watch?v=Lm5OKvh31_s
     emailjs
       .sendForm(
-        'gmail', // Emailjs service ID - console,
+        'gmail', // Emailjs service ID,
         'template_drzSGLuL', // Emailjs template id,
         'form',
-        'user_MbCahBypCSJ1Phr6g23Jw', // Emailjs user id
+        'user_MbCahBypCSJ1Phr6g23Jw', // Emailjs user id (go to Account, then Api keys and grab the User ID)
       )
       .then()
       .catch()
@@ -181,6 +187,7 @@ const Contacts = (props) => {
                       paragraph
                       className="my-info__items--content--text"
                     >
+                      {/* Your email address */}
                       olvia.silva@gmail.com
                     </Typography>
                     <Typography
@@ -188,6 +195,7 @@ const Contacts = (props) => {
                       paragraph
                       className="my-info__items--content--text"
                     >
+                      {/* Your email address */}
                       trabalhasemuito@hotmail.com
                     </Typography>
                   </div>
@@ -202,6 +210,7 @@ const Contacts = (props) => {
                       paragraph
                       className="my-info__items--content--text"
                     >
+                      {/* Your phone number */}
                       +351 915 565 489
                     </Typography>
                     <Typography
@@ -209,6 +218,7 @@ const Contacts = (props) => {
                       paragraph
                       className="my-info__items--content--text"
                     >
+                      {/* Your phone number */}
                       +351 225 456 654
                     </Typography>
                   </div>
@@ -216,6 +226,7 @@ const Contacts = (props) => {
                 <div className="division" />
                 <div className="division" style={{ marginTop: '5px' }} />
                 <div className="link-icons">
+                  {/* Replace these URLs with your profile urls */}
                   <IconButton
                     target="_blank"
                     rel="noopener"

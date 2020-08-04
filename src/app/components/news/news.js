@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react'
-import './news.scss'
+import './news.css'
 import { withNamespaces } from 'react-i18next'
 import { Typography, Grid } from '@material-ui/core'
 import {
@@ -17,6 +17,9 @@ import thirdNewsImage from '../../images/concert.webp'
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
 
+/**
+ * News page component
+ */
 const News = (props) => {
   const { t } = props
   return (
@@ -30,6 +33,7 @@ const News = (props) => {
               </Typography>
             </Grid>
             <Grid item xs={12} md={6} lg={4} align="center">
+              {/* You can add your external links to the news in the href property */}
               <div className="image-container">
                 <a
                   target="_blank"
@@ -46,16 +50,13 @@ const News = (props) => {
                       variant="h5"
                       className="image--description__title"
                     >
-                      {' '}
                       Next event September 12th 2020
                     </Typography>
                     <Typography
                       variant="body2"
                       className="image--description__description"
                     >
-                      {' '}
-                      This thing is gonna be do açu meu menino, aquilo é que vai
-                      ser, é de não perder filho.
+                      This thing is gonna be really nice, just wait and see!
                     </Typography>
                     <InfoIcon className="image--description__icon" />
                   </div>
@@ -79,16 +80,13 @@ const News = (props) => {
                       variant="h5"
                       className="image--description__title"
                     >
-                      {' '}
                       Next event September 12th 2020
                     </Typography>
                     <Typography
                       variant="body2"
                       className="image--description__description"
                     >
-                      {' '}
-                      This thing is gonna be do açu meu menino, aquilo é que vai
-                      ser, é de não perder filho.
+                      This thing is gonna be really nice, just wait and see!
                     </Typography>
                     <InfoIcon className="image--description__icon" />
                   </div>
@@ -112,16 +110,13 @@ const News = (props) => {
                       variant="h5"
                       className="image--description__title"
                     >
-                      {' '}
                       Next event September 12th 2020
                     </Typography>
                     <Typography
                       variant="body2"
                       className="image--description__description"
                     >
-                      {' '}
-                      This thing is gonna be do açu meu menino, aquilo é que vai
-                      ser, é de não perder filho.
+                      This thing is gonna be really nice, just wait and see!
                     </Typography>
                     <InfoIcon className="image--description__icon" />
                   </div>

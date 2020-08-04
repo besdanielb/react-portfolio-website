@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import './aboutMe.scss'
+import './aboutMe.css'
 import { withNamespaces } from 'react-i18next'
 import { Typography, Button, Hidden } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
@@ -11,6 +11,7 @@ import {
   MuiThemeProvider,
 } from '@material-ui/core/styles'
 import GetAppIcon from '@material-ui/icons/GetApp'
+// Profile picture import path
 import image from '../../images/portrait.webp'
 
 import FullWidthTabs from './tabs'
@@ -19,7 +20,7 @@ let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
 
 /**
- * About me page
+ * About Me page component
  */
 const AboutMe = (props) => {
   const { t } = props
@@ -37,6 +38,7 @@ const AboutMe = (props) => {
                 lg={4}
                 className="image-container"
               >
+                {/* Your Profile picture */}
                 <Grid item align="center">
                   {/* Photo by Hunter Newton on Unsplash */}
                   <img
@@ -52,6 +54,7 @@ const AboutMe = (props) => {
                   style={{ height: 'fit-content', marginTop: '1rem' }}
                 >
                   <Hidden smDown>
+                    {/* Path to your curriculum file to download */}
                     <a href="/files/cv.txt" download>
                       <Button
                         variant="contained"
@@ -94,6 +97,7 @@ const AboutMe = (props) => {
                     </Typography>
                   </Grid>
                 </Grid>
+                {/* About me description text - can be found on src/app/locales */}
                 <Grid item align="left" xs={12} className="title-container">
                   <Typography variant="h6" paragraph className="p">
                     {t('aboutMe.description.p1')}

@@ -12,6 +12,9 @@ import {
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
 
+/**
+ * Home page component
+ */
 const Home = (props) => {
   const { t } = props
   return (
