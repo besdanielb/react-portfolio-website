@@ -10,7 +10,11 @@ import { withNamespaces } from 'react-i18next'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import { Typography } from '@material-ui/core'
-import { createMuiTheme, MuiThemeProvider, responsiveFontSizes } from '@material-ui/core/styles'
+import {
+  createMuiTheme,
+  MuiThemeProvider,
+  responsiveFontSizes,
+} from '@material-ui/core/styles'
 import galleryData from './galleryData'
 
 let theme = createMuiTheme()
@@ -21,10 +25,12 @@ let caption
 
 const Gallery = (props) => {
   const { i18n, t } = props
-  const responsive = { 0: { items: 1 },
+  const responsive = {
+    0: { items: 1 },
     600: { items: 2 },
     1024: { items: 3 },
-    1600: { items: 4 } }
+    1600: { items: 4 },
+  }
   const handleOnDragStart = (e) => e.preventDefault()
 
   useEffect(() => {
@@ -54,7 +60,9 @@ const Gallery = (props) => {
     <section id="gallery">
       <div className="container">
         <MuiThemeProvider theme={theme}>
-          <Typography variant="h2" className="title">{t('gallery.title')}</Typography>
+          <Typography variant="h2" className="title">
+            {t('gallery.title')}
+          </Typography>
 
           <AliceCarousel
             autoPlay
@@ -68,7 +76,13 @@ const Gallery = (props) => {
           >
             {galleryData.map((galleryItem, i) => (
               <div key={i} className="image-container" onClick={onImageClick}>
-                <img data-original={galleryItem.image} src={galleryItem.image} onDragStart={handleOnDragStart} className="sliderimg" alt={galleryItem.title[i18n.language]} />
+                <img
+                  data-original={galleryItem.image}
+                  src={galleryItem.image}
+                  onDragStart={handleOnDragStart}
+                  className="sliderimg"
+                  alt={galleryItem.title[i18n.language]}
+                />
               </div>
             ))}
           </AliceCarousel>

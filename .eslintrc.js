@@ -3,11 +3,8 @@ module.exports = {
     browser: true,
     es2020: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
-  "parser": "babel-eslint",
+  extends: ['@imaginary-cloud/react'],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       js: true,
@@ -15,12 +12,9 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
-  "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "semi": ["error", "never"],
-    "object-curly-newline": ["error", "never"]
-  }
-};
+  plugins: ['react'],
+  rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    semi: ['error', 'never'],
+  },
+}

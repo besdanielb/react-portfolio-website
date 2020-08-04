@@ -2,7 +2,12 @@
 import React from 'react'
 import './contacts.css'
 import { withNamespaces } from 'react-i18next'
-import { makeStyles, ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import {
+  makeStyles,
+  ThemeProvider,
+  createMuiTheme,
+  responsiveFontSizes,
+} from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import SendIcon from '@material-ui/icons/Send'
 import { Button, Grid, Typography, IconButton } from '@material-ui/core'
@@ -18,27 +23,38 @@ import * as emailjs from 'emailjs-com'
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
 
-const useStyles = makeStyles(() => ({ root: { display: 'flex',
-  alignSelf: 'flex-end',
-  height: 'calc(100vh - 3.9rem)',
-  overflowY: 'auto',
-  marginTop: '3.9rem',
+const useStyles = makeStyles(() => ({
+  root: {
+    display: 'flex',
+    alignSelf: 'flex-end',
+    height: 'calc(100vh - 3.9rem)',
+    overflowY: 'auto',
+    marginTop: '3.9rem',
 
-  '& > *': { marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(3),
-    marginRight: theme.spacing(3),
-    marginLeft: theme.spacing(6) },
-  '& input:valid + fieldset': { borderColor: 'white' },
-  '& label': { '&.Mui-focused': { color: 'white' },
-    color: 'white' },
-  '& .MuiInputBase-input': { color: 'white',
-    'input:-internal-autofill-selected': { backgroundColor: 'black',
-      color: 'black' } },
+    '& > *': {
+      marginTop: theme.spacing(3),
+      marginBottom: theme.spacing(3),
+      marginRight: theme.spacing(3),
+      marginLeft: theme.spacing(6),
+    },
+    '& input:valid + fieldset': { borderColor: 'white' },
+    '& label': { '&.Mui-focused': { color: 'white' }, color: 'white' },
+    '& .MuiInputBase-input': {
+      color: 'white',
+      'input:-internal-autofill-selected': {
+        backgroundColor: 'black',
+        color: 'black',
+      },
+    },
 
-  '& .MuiTextField-root': { '&:hover label': { color: 'skyblue' } },
-  '& .MuiOutlinedInput-root': { '& fieldset': { borderColor: 'white' },
-    '&:hover fieldset': { borderColor: 'skyblue' },
-    '&.Mui-focused fieldset': { borderColor: 'white' } } } }))
+    '& .MuiTextField-root': { '&:hover label': { color: 'skyblue' } },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': { borderColor: 'white' },
+      '&:hover fieldset': { borderColor: 'skyblue' },
+      '&.Mui-focused fieldset': { borderColor: 'white' },
+    },
+  },
+}))
 
 const Contacts = (props) => {
   const { t } = props
@@ -48,12 +64,15 @@ const Contacts = (props) => {
   const onSubmit = (data, e) => {
     e.preventDefault()
     // For a simple set by step explanation watch: https://www.youtube.com/watch?v=Lm5OKvh31_s
-    emailjs.sendForm(
-      'gmail', // Emailjs service ID - console,
-      'template_drzSGLuL', // Emailjs template id,
-      'form',
-      'user_MbCahBypCSJ1Phr6g23Jw', // Emailjs user id
-    ).then().catch()
+    emailjs
+      .sendForm(
+        'gmail', // Emailjs service ID - console,
+        'template_drzSGLuL', // Emailjs template id,
+        'form',
+        'user_MbCahBypCSJ1Phr6g23Jw', // Emailjs user id
+      )
+      .then()
+      .catch()
     e.target.reset()
   }
   return (
@@ -62,10 +81,19 @@ const Contacts = (props) => {
         <Grid container align="left" className="grid-container">
           <Grid item xs={12} style={{ height: 'fit-content' }}>
             <ThemeProvider theme={theme}>
-              <Typography variant="h3" paragraph className="title">{t('contacts.title')}</Typography>
+              <Typography variant="h3" paragraph className="title">
+                {t('contacts.title')}
+              </Typography>
             </ThemeProvider>
           </Grid>
-          <Grid item container xs spacing={3} className="form-container" style={{ height: '90%' }}>
+          <Grid
+            item
+            container
+            xs
+            spacing={3}
+            className="form-container"
+            style={{ height: '90%' }}
+          >
             <Grid item xs={12} md={6}>
               <TextField
                 required
@@ -119,13 +147,28 @@ const Contacts = (props) => {
               />
             </Grid>
             <Grid item xs={12}>
-              <Button variant="outlined" aria-label="Send email" name="submit" type="submit">
+              <Button
+                variant="outlined"
+                aria-label="Send email"
+                name="submit"
+                type="submit"
+              >
                 {t('contacts.sendEmail')}
                 <SendIcon className="send-icon" />
               </Button>
             </Grid>
           </Grid>
-          <Grid item container xs={12} sm={12} md={6} spacing={3} justify="center" align="center" className="my-info">
+          <Grid
+            item
+            container
+            xs={12}
+            sm={12}
+            md={6}
+            spacing={3}
+            justify="center"
+            align="center"
+            className="my-info"
+          >
             <Grid item align="center" className="my-info__items">
               <ThemeProvider theme={theme}>
                 <div className="my-info__contact-info" id="email">
@@ -133,8 +176,20 @@ const Contacts = (props) => {
                     <EmailIcon className="contact-icon" fontSize="large" />
                   </div>
                   <div className="my-info__contact-info--content">
-                    <Typography variant="body1" paragraph className="my-info__items--content--text">olvia.silva@gmail.com</Typography>
-                    <Typography variant="body1" paragraph className="my-info__items--content--text">trabalhasemuito@hotmail.com</Typography>
+                    <Typography
+                      variant="body1"
+                      paragraph
+                      className="my-info__items--content--text"
+                    >
+                      olvia.silva@gmail.com
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      paragraph
+                      className="my-info__items--content--text"
+                    >
+                      trabalhasemuito@hotmail.com
+                    </Typography>
                   </div>
                 </div>
                 <div className="my-info__contact-info">
@@ -142,17 +197,53 @@ const Contacts = (props) => {
                     <PhoneIcon className="contact-icon" fontSize="large" />
                   </div>
                   <div className="my-info__contact-info--content">
-                    <Typography variant="body1" paragraph className="my-info__items--content--text">+351 915 565 489</Typography>
-                    <Typography variant="body1" paragraph className="my-info__items--content--text">+351 225 456 654</Typography>
+                    <Typography
+                      variant="body1"
+                      paragraph
+                      className="my-info__items--content--text"
+                    >
+                      +351 915 565 489
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      paragraph
+                      className="my-info__items--content--text"
+                    >
+                      +351 225 456 654
+                    </Typography>
                   </div>
                 </div>
                 <div className="division" />
                 <div className="division" style={{ marginTop: '5px' }} />
                 <div className="link-icons">
-                  <IconButton target="_blank" rel="noopener" href="http://www.facebook.com"><FacebookIcon /></IconButton>
-                  <IconButton target="_blank" rel="noopener" href="http://www.instagram.com"><InstagramIcon /></IconButton>
-                  <IconButton target="_blank" rel="noopener" href="http://www.linkedin.com"><LinkedInIcon /></IconButton>
-                  <IconButton target="_blank" rel="noopener" href="http://www.youtube.com"><YouTubeIcon /></IconButton>
+                  <IconButton
+                    target="_blank"
+                    rel="noopener"
+                    href="http://www.facebook.com"
+                  >
+                    <FacebookIcon />
+                  </IconButton>
+                  <IconButton
+                    target="_blank"
+                    rel="noopener"
+                    href="http://www.instagram.com"
+                  >
+                    <InstagramIcon />
+                  </IconButton>
+                  <IconButton
+                    target="_blank"
+                    rel="noopener"
+                    href="http://www.linkedin.com"
+                  >
+                    <LinkedInIcon />
+                  </IconButton>
+                  <IconButton
+                    target="_blank"
+                    rel="noopener"
+                    href="http://www.youtube.com"
+                  >
+                    <YouTubeIcon />
+                  </IconButton>
                 </div>
               </ThemeProvider>
             </Grid>

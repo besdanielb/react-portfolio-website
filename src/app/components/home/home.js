@@ -3,7 +3,11 @@ import React from 'react'
 import './home.css'
 import { withNamespaces } from 'react-i18next'
 import { Typography } from '@material-ui/core'
-import { createMuiTheme, MuiThemeProvider, responsiveFontSizes } from '@material-ui/core/styles'
+import {
+  createMuiTheme,
+  MuiThemeProvider,
+  responsiveFontSizes,
+} from '@material-ui/core/styles'
 
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)

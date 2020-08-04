@@ -29,14 +29,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/app/**/*.js"
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\""
   },
   "cacheDirectories": [
     "node_modules"
   ],
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "@imaginary-cloud/react"
   },
+  "prettier": "@imaginary-cloud/prettier-config",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -50,14 +53,19 @@
     ]
   },
   "devDependencies": {
+    "@imaginary-cloud/eslint-config-react": "^1.0.1",
+    "@imaginary-cloud/prettier-config": "^1.0.0",
     "@types/i18n": "^0.8.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.7",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "^2.0.5",
     "webpack-bundle-analyzer": "^3.7.0"
   }
 }

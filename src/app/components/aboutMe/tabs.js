@@ -31,8 +31,10 @@ function TabPanel(props) {
 }
 
 function a11yProps(index) {
-  return { id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}` }
+  return {
+    id: `full-width-tab-${index}`,
+    'aria-controls': `full-width-tabpanel-${index}`,
+  }
 }
 
 const FullWidthTabs = (props) => {
@@ -60,10 +62,26 @@ const FullWidthTabs = (props) => {
           scrollButtons="on"
           aria-label="full width tabs example"
         >
-          <Tab style={{ fontWeight: 'bold' }} label={t('aboutMe.tab1')} {...a11yProps(0)} />
-          <Tab style={{ fontWeight: 'bold' }} label={t('aboutMe.tab2')} {...a11yProps(1)} />
-          <Tab style={{ fontWeight: 'bold' }} label={t('aboutMe.tab3')} {...a11yProps(2)} />
-          <Tab style={{ fontWeight: 'bold' }} label={t('aboutMe.tab4')} {...a11yProps(3)} />
+          <Tab
+            style={{ fontWeight: 'bold' }}
+            label={t('aboutMe.tab1')}
+            {...a11yProps(0)}
+          />
+          <Tab
+            style={{ fontWeight: 'bold' }}
+            label={t('aboutMe.tab2')}
+            {...a11yProps(1)}
+          />
+          <Tab
+            style={{ fontWeight: 'bold' }}
+            label={t('aboutMe.tab3')}
+            {...a11yProps(2)}
+          />
+          <Tab
+            style={{ fontWeight: 'bold' }}
+            label={t('aboutMe.tab4')}
+            {...a11yProps(3)}
+          />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -72,28 +90,62 @@ const FullWidthTabs = (props) => {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <Typography variant={'body1'} className="bold">Music Composition</Typography>
-          <Typography variant={'body2'} paragraph>Im actually super good, you have no idea</Typography>
-          <Typography variant={'body1'} className="bold">Chatear o peeps</Typography>
-          <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
+          <Typography variant={'body1'} className="bold">
+            Music Composition
+          </Typography>
+          <Typography variant={'body2'} paragraph>
+            Im actually super good, you have no idea
+          </Typography>
+          <Typography variant={'body1'} className="bold">
+            Chatear o peeps
+          </Typography>
+          <Typography variant={'body2'} paragraph>
+            Isto é o que eu gosto mais de fazer
+          </Typography>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <Typography variant={'body1'} className="bold">Experience? Nice meme bro</Typography>
-          <Typography variant={'body2'} paragraph>Are you dumb, stupid or dumb?</Typography>
-          <Typography variant={'body1'} className="bold">Chatear o peeps</Typography>
-          <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
+          <Typography variant={'body1'} className="bold">
+            Experience? Nice meme bro
+          </Typography>
+          <Typography variant={'body2'} paragraph>
+            Are you dumb, stupid or dumb?
+          </Typography>
+          <Typography variant={'body1'} className="bold">
+            Chatear o peeps
+          </Typography>
+          <Typography variant={'body2'} paragraph>
+            Isto é o que eu gosto mais de fazer
+          </Typography>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Typography variant={'body1'} className="bold">Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
-          <Typography variant={'body2'} paragraph>Podia ter ido para Aveiro que é melhor, mas era longe e não me deixam andar sozinha</Typography>
-          <Typography variant={'body1'} className="bold">Chatear o peeps</Typography>
-          <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
+          <Typography variant={'body1'} className="bold">
+            Grande ESMAE (07/08/1996 - 01/02/2039)
+          </Typography>
+          <Typography variant={'body2'} paragraph>
+            Podia ter ido para Aveiro que é melhor, mas era longe e não me
+            deixam andar sozinha
+          </Typography>
+          <Typography variant={'body1'} className="bold">
+            Chatear o peeps
+          </Typography>
+          <Typography variant={'body2'} paragraph>
+            Isto é o que eu gosto mais de fazer
+          </Typography>
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-          <Typography variant={'body1'} className="bold">Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
-          <Typography variant={'body2'} paragraph>Podia ter ido para Aveiro que é melhor, mas era longe e não me deixam andar sozinha</Typography>
-          <Typography variant={'body1'} className="bold">Chatear o peeps</Typography>
-          <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
+          <Typography variant={'body1'} className="bold">
+            Grande ESMAE (07/08/1996 - 01/02/2039)
+          </Typography>
+          <Typography variant={'body2'} paragraph>
+            Podia ter ido para Aveiro que é melhor, mas era longe e não me
+            deixam andar sozinha
+          </Typography>
+          <Typography variant={'body1'} className="bold">
+            Chatear o peeps
+          </Typography>
+          <Typography variant={'body2'} paragraph>
+            Isto é o que eu gosto mais de fazer
+          </Typography>
         </TabPanel>
       </SwipeableViews>
     </div>
