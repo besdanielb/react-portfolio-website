@@ -3,8 +3,6 @@ import bookImage from '../../images/book.webp'
 import plantImage from '../../images/plant.webp'
 import tableImage from '../../images/table.webp'
 import workStuffImage from '../../images/work-stuff.webp'
-import image1 from '../../images/headphones-large.webp'
-import image5 from '../../images/portfolio-view-large.webp'
 
 const galleryData = [
 
@@ -20,10 +18,10 @@ const galleryData = [
   { image: workStuffImage,
     title: { en: 'Image title', pt: 'Titulo da imagem' },
     description: { en: 'Image 4 Description', pt: 'Descrição da imagem' } },
-  { image: image5,
+  { image: bookImage,
     title: { en: 'Image title', pt: 'Titulo da imagem' },
     description: { en: 'Image 5 Description', pt: 'Descrição da imagem' } },
-  { image: image1,
+  { image: workStuffImage,
     title: { en: 'Image title', pt: 'Titulo da imagem' },
     description: { en: 'Image 6 Description', pt: 'Descrição da imagem' } },
 ]

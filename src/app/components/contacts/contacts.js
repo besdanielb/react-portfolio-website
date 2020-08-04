@@ -62,7 +62,7 @@ const Contacts = (props) => {
         <Grid container align="left" className="grid-container">
           <Grid item xs={12} style={{ height: 'fit-content' }}>
             <ThemeProvider theme={theme}>
-              <Typography variant="h3" paragraph>{t('contacts.title')}</Typography>
+              <Typography variant="h3" paragraph className="title">{t('contacts.title')}</Typography>
             </ThemeProvider>
           </Grid>
           <Grid item container xs spacing={3} className="form-container" style={{ height: '90%' }}>
@@ -133,8 +133,8 @@ const Contacts = (props) => {
                     <EmailIcon className="contact-icon" fontSize="large" />
                   </div>
                   <div className="my-info__contact-info--content">
-                    <Typography variant="body1" paragraph className="my-info__items--content--email">olvia.silva@gmail.com</Typography>
-                    <Typography variant="body1" paragraph className="my-info__items--content--email">trabalhasemuito@hotmail.com</Typography>
+                    <Typography variant="body1" paragraph className="my-info__items--content--text">olvia.silva@gmail.com</Typography>
+                    <Typography variant="body1" paragraph className="my-info__items--content--text">trabalhasemuito@hotmail.com</Typography>
                   </div>
                 </div>
                 <div className="my-info__contact-info">
@@ -142,8 +142,8 @@ const Contacts = (props) => {
                     <PhoneIcon className="contact-icon" fontSize="large" />
                   </div>
                   <div className="my-info__contact-info--content">
-                    <Typography variant="body1" paragraph className="my-info__items--content--email">+351 915 565 489</Typography>
-                    <Typography variant="body1" paragraph className="my-info__items--content--email">+351 225 456 654</Typography>
+                    <Typography variant="body1" paragraph className="my-info__items--content--text">+351 915 565 489</Typography>
+                    <Typography variant="body1" paragraph className="my-info__items--content--text">+351 225 456 654</Typography>
                   </div>
                 </div>
                 <div className="division" />

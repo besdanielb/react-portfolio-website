@@ -16,8 +16,8 @@ section#contacts {
   width: 100vw;
   height: 100vh;
   scroll-snap-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.4))), url("../../images/table.webp") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../../images/table.webp") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.3))), url("../../images/table.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("../../images/table.webp") no-repeat center center/cover;
 }
 
 section#contacts .MuiButton-root {
@@ -28,6 +28,10 @@ section#contacts .MuiButton-root {
 section#contacts .MuiButton-root:hover {
   color: skyblue;
   border-color: skyblue;
+}
+
+section#contacts .title {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
 }
 
 section#contacts .send-icon {
@@ -96,36 +100,12 @@ section#contacts .my-info__items--content {
   width: fit-content;
 }
 
-section#contacts .my-info__items--content--email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+section#contacts .my-info__items--content--text {
   margin-top: 8px;
   margin-bottom: 16px;
-  color: rgba(0, 0, 0, 0.8);
+  color: white;
   letter-spacing: 1px;
-}
-
-section#contacts .my-info__items--content--phone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-bottom: 16px;
-}
-
-section#contacts .my-info__items--content--location {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
 }
 
 section#contacts .my-info__contact-info {
@@ -133,14 +113,23 @@ section#contacts .my-info__contact-info {
           box-sizing: border-box;
   border: 1px solid #ebebeb;
   border-radius: 10px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
   position: relative;
-  padding: 54px 20px 50px;
+  padding: 50px 10px 40px;
   width: 18rem;
-  height: 11rem;
+  height: 10rem;
   margin-bottom: 2rem;
-  -webkit-box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 10px 55px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 55px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section#contacts .my-info__contact-info#email {
@@ -149,17 +138,17 @@ section#contacts .my-info__contact-info#email {
 
 section#contacts .my-info__contact-info--icon {
   border: 1px solid #ebebeb;
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   color: red;
   line-height: 63px;
   text-align: center;
   border-radius: 100%;
-  background: #fff;
+  background: white;
   font-size: 28px;
   position: absolute;
   top: -31px;
-  left: 47px;
+  left: 110px;
 }
 
 @media only screen and (max-width: 960px) {

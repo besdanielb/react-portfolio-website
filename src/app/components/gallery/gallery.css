@@ -15,8 +15,8 @@ section#gallery {
   width: 100vw;
   height: 100vh;
   scroll-snap-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.6))), url("../../images/shapes.webp") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../../images/shapes.webp") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.3))), url("../../images/shapes.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("../../images/shapes.webp") no-repeat center center/cover;
 }
 
 section#gallery .alice-carousel {
@@ -33,6 +33,7 @@ section#gallery .title {
           justify-content: center;
   font-weight: bold;
   margin-top: 3rem;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
 }
 
 section#gallery .alice-carousel__stage-item {

@@ -7,7 +7,7 @@ section#gallery {
     height: 100vh;
     scroll-snap-align: center;
     // Photo by Shapelined on Unsplash
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
         url("../../images/shapes.webp") no-repeat center center/cover;
 
     .alice-carousel {
@@ -20,6 +20,7 @@ section#gallery {
         justify-content: center;
         font-weight: bold;
         margin-top: 3rem;
+        text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
     }
 
     .alice-carousel__stage-item {

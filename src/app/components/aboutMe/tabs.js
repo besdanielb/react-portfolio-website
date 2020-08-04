@@ -72,27 +72,27 @@ const FullWidthTabs = (props) => {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <Typography variant={'h6'} paragraph>Music Composition</Typography>
+          <Typography variant={'body1'} className="bold">Music Composition</Typography>
           <Typography variant={'body2'} paragraph>Im actually super good, you have no idea</Typography>
-          <Typography variant={'h6'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'body1'} className="bold">Chatear o peeps</Typography>
           <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <Typography variant={'h6'} paragraph>Experience? Nice meme bro</Typography>
+          <Typography variant={'body1'} className="bold">Experience? Nice meme bro</Typography>
           <Typography variant={'body2'} paragraph>Are you dumb, stupid or dumb?</Typography>
-          <Typography variant={'h6'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'body1'} className="bold">Chatear o peeps</Typography>
           <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Typography variant={'h6'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
+          <Typography variant={'body1'} className="bold">Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
           <Typography variant={'body2'} paragraph>Podia ter ido para Aveiro que é melhor, mas era longe e não me deixam andar sozinha</Typography>
-          <Typography variant={'h6'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'body1'} className="bold">Chatear o peeps</Typography>
           <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-          <Typography variant={'h6'} paragraph>Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
+          <Typography variant={'body1'} className="bold">Grande ESMAE (07/08/1996 - 01/02/2039)</Typography>
           <Typography variant={'body2'} paragraph>Podia ter ido para Aveiro que é melhor, mas era longe e não me deixam andar sozinha</Typography>
-          <Typography variant={'h6'} paragraph>Chatear o peeps</Typography>
+          <Typography variant={'body1'} className="bold">Chatear o peeps</Typography>
           <Typography variant={'body2'} paragraph>Isto é o que eu gosto mais de fazer</Typography>
         </TabPanel>
       </SwipeableViews>

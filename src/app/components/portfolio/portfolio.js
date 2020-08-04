@@ -19,8 +19,7 @@ const Portfolio = (props) => {
   const responsive = { 0: { items: 1 },
     600: { items: 2 },
     1024: { items: 3 },
-    1600: { items: 4 },
-    2000: { items: 5 } }
+    1600: { items: 4 } }
   const handleOnDragStart = (e) => e.preventDefault()
 
   return (

@@ -7,9 +7,10 @@ section#news {
     width: 100vw;
     height: 100vh;
     scroll-snap-align: center;
-    //Photo by AbsolutVision on Unsplash
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-        url("../../images/newspapers.webp") no-repeat center center/cover;
+    //Photo by Steve Johnson on Unsplash
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+        url("../../images/news.webp") no-repeat center center/cover;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
 
     .container {
         display: flex;
@@ -45,7 +46,7 @@ section#news {
             width: 400px;
             border-radius: 6px;
             box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
-            transition: transform 0.4s;
+            transition: all 0.4s;
             object-fit: cover;
 
             &--description {
@@ -55,12 +56,12 @@ section#news {
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+                background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
                 color: #fff;
                 border-radius: 6px;
                 visibility: hidden;
                 opacity: 0;
-                transition: transform 0.4s;
+                transition: all 0.4s;
                 text-align: left;
 
                 &__title {
@@ -90,10 +91,50 @@ section#news {
     }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1024px) {
     section#news {
         .container {
-            overflow: auto;
+            .title {
+                margin-top: 1rem;
+                margin-bottom: 3rem;
+            }
+
+            overflow-y: scroll;
+
+            .image-container {
+                display: flex;
+                margin-bottom: 3rem;
+
+                &:hover .image--description {
+                    transform: none;
+                }
+
+                &:hover .image {
+                    transform: none;
+                }
+            }
+
+            .image {
+                height: 100%;
+                &--description {
+                    height: 100%;
+                    top: 0%;
+                    opacity: 1;
+                    visibility: visible;
+                    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+
+                    &__title {
+                        bottom: 20%;
+                        margin: 10px;
+                    }
+
+                    &__description {
+                        position: absolute;
+                        bottom: 5%;
+                        margin: 10px;
+                    }
+                }
+            }
         }
     }
 }
@@ -101,7 +142,51 @@ section#news {
 @media only screen and (max-width: 768px) {
     section#news {
         .container {
+            .title {
+                margin-top: 1rem;
+                margin-bottom: 3rem;
+            }
+
             overflow-y: scroll;
+
+            .image-container {
+                height: 85%;
+                width: 70%;
+                display: flex;
+
+                &:hover .image--description {
+                    transform: none;
+                }
+
+                &:hover .image {
+                    transform: none;
+                }
+            }
+
+            .image {
+                height: 85%;
+                width: 70%;
+                &--description {
+                    height: 85%;
+                    width: 70%;
+                    top: 0%;
+                    left: 15%;
+                    opacity: 1;
+                    visibility: visible;
+                    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+
+                    &__title {
+                        bottom: 20%;
+                        margin: 10px;
+                    }
+
+                    &__description {
+                        position: absolute;
+                        bottom: 5%;
+                        margin: 10px;
+                    }
+                }
+            }
         }
 
         .MuiTypography-h1 {

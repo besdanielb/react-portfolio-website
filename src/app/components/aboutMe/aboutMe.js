@@ -29,7 +29,7 @@ const AboutMe = (props) => {
                 <Grid item xs style={{ height: 'fit-content', marginTop: '1rem' }}>
                   <Hidden smDown>
                     <a href="/files/cv.txt" download>
-                      <Button variant="contained" aria-label="Download cv" style={{ backgroundColor: 'white' }}>
+                      <Button variant="contained" className="download-button" aria-label="Download cv" style={{ backgroundColor: 'white' }}>
                         <GetAppIcon className="download-icon" style={{ marginRight: '5px' }} />
                         {t('aboutMe.downloadCV')}
                       </Button>

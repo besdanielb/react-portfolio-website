@@ -16,8 +16,8 @@ section#aboutMe {
   width: 100vw;
   height: 100vh;
   scroll-snap-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url("../../images/book.webp") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../../images/book.webp") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.8))), url("../../images/book.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../../images/book.webp") no-repeat center center/cover;
 }
 
 section#aboutMe .appbar-root {
@@ -27,6 +27,14 @@ section#aboutMe .appbar-root {
   width: -moz-fit-content;
   width: fit-content;
   max-width: 100%;
+}
+
+section#aboutMe .bold {
+  font-weight: bold;
+}
+
+section#aboutMe .download-button:hover {
+  color: #0088a9;
 }
 
 section#aboutMe .container {
@@ -50,10 +58,10 @@ section#aboutMe .container .image-container {
 }
 
 section#aboutMe .container .image {
-  width: 90%;
+  width: 75%;
   max-width: 90%;
-  height: 90%;
-  max-height: 90%;
+  height: auto;
+  max-height: 85%;
   border-radius: 2%;
   margin-top: 5px;
   -webkit-box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
@@ -80,6 +88,7 @@ section#aboutMe .container .PrivateTabIndicator-colorSecondary-24 {
 
 section#aboutMe .title {
   color: white;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
   font-weight: bold;
 }
 
@@ -88,26 +97,40 @@ section#aboutMe .p {
   color: white !important;
 }
 
-@media only screen and (max-width: 1024px) {
-  section#aboutMe .title {
-    font-size: 7vw;
-  }
+@media only screen and (max-width: 1400px) {
   section#aboutMe .appbar-root {
-    max-width: 90%;
+    max-width: 80%;
     margin-top: 3rem;
+  }
+  section#aboutMe .container .image {
+    width: 70vw;
+    height: auto;
   }
 }
 
 @media only screen and (max-width: 960px) {
-  section#aboutMe .title {
-    font-size: 6vw;
+  section#aboutMe .appbar-root {
+    max-width: 85%;
+    margin-top: 3rem;
+    display: inline-block;
   }
   section#aboutMe .container .title-container {
     text-align: center;
   }
   section#aboutMe .container .image {
-    width: 60vw;
-    height: 70vh;
+    width: 50vw;
+    height: auto;
+  }
+  section#aboutMe .container .description {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    height: auto;
+    padding-left: 0;
+  }
+  section#aboutMe .container .grid-container {
+    padding-left: 0;
   }
   section#aboutMe .container .p {
     margin: 1rem;
@@ -116,7 +139,6 @@ section#aboutMe .p {
 
 @media only screen and (max-width: 768px) {
   section#aboutMe .title {
-    font-size: 7vw;
     margin-top: 2rem;
   }
   section#aboutMe .appbar-root {
@@ -125,8 +147,9 @@ section#aboutMe .p {
     display: inline-block;
   }
   section#aboutMe .container .image {
-    width: 70vw;
-    height: 60vh;
+    margin-top: 4rem;
+    width: 60vw;
+    height: auto;
   }
   section#aboutMe .container .description {
     -webkit-box-pack: center;
