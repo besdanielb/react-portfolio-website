@@ -142,32 +142,13 @@ section#aboutMe .p {
   section#aboutMe .title {
     margin-top: 2rem;
   }
-  section#aboutMe .appbar-root {
-    max-width: 85%;
-    margin-top: 3rem;
-    display: inline-block;
-  }
   section#aboutMe .container .image {
     margin-top: 4rem;
     width: 60vw;
     height: auto;
   }
-  section#aboutMe .container .description {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0;
-    height: auto;
-    padding-left: 0;
-  }
-  section#aboutMe .container .p {
-    margin: 1rem;
-  }
   section#aboutMe .container .image-container {
     height: auto;
-  }
-  section#aboutMe .container .grid-container {
-    padding-left: 0;
   }
 }
 
@@ -193,11 +174,16 @@ section#aboutMe .p {
     height: 45vh;
     margin-bottom: 2rem;
   }
-  section#aboutMe .container .image-container {
-    height: auto;
+}
+
+@media screen and (orientation: landscape) {
+  section#aboutMe .title {
+    margin-top: 0rem;
   }
-  section#aboutMe .container .grid-container {
-    padding-left: 0;
+  section#aboutMe .container .image {
+    width: 60vw;
+    height: auto;
+    margin-bottom: 2rem;
   }
 }
 /*# sourceMappingURL=aboutMe.css.map */

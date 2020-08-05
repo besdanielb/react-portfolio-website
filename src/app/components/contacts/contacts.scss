@@ -21,8 +21,13 @@ section#contacts {
         }
     }
 
+    .grid-container {
+        align-content: baseline;
+    }
+
     .title {
         text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+        margin-bottom: 3rem;
     }
 
     .send-icon {
@@ -135,7 +140,7 @@ section#contacts {
 
         .my-info {
             align-items: flex-end;
-            margin-top: 8vw;
+            margin-top: 0vw;
 
             &__items {
                 &--title {
@@ -151,6 +156,14 @@ section#contacts {
 
         .division {
             width: 100%;
+        }
+    }
+}
+
+@media screen and (orientation: landscape) {
+    section#contacts {
+        .form-container {
+            height: auto;
         }
     }
 }

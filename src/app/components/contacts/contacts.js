@@ -92,14 +92,7 @@ const Contacts = (props) => {
               </Typography>
             </ThemeProvider>
           </Grid>
-          <Grid
-            item
-            container
-            xs
-            spacing={3}
-            className="form-container"
-            style={{ height: '90%' }}
-          >
+          <Grid item container xs spacing={3} className="form-container">
             <Grid item xs={12} md={6}>
               <TextField
                 required

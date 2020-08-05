@@ -185,4 +185,11 @@ section#gallery .modal .full-img.open {
     height: 60vh;
   }
 }
+
+@media screen and (orientation: landscape) {
+  section#gallery .title {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+}
 /*# sourceMappingURL=gallery.css.map */

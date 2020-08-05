@@ -141,4 +141,11 @@ section#portfolio .sliderimg--description__icon {
     margin-bottom: 1rem;
   }
 }
+
+@media screen and (orientation: landscape) {
+  section#portfolio .title {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+}
 /*# sourceMappingURL=portfolio.css.map */

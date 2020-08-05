@@ -116,3 +116,12 @@ section#portfolio {
         }
     }
 }
+
+@media screen and (orientation: landscape) {
+    section#portfolio {
+        .title {
+            margin-top: 0rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
