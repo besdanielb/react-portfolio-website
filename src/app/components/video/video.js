@@ -19,11 +19,14 @@ theme = responsiveFontSizes(theme)
 const Video = (props) => {
   const { t } = props
   return (
-    <section id="media">
+    <section id="video">
       <div className="container">
         <MuiThemeProvider theme={theme}>
           <Typography variant="h2" className="title">
             {t('video.title')}
+          </Typography>
+          <Typography variant="body1" className="description">
+            {t('video.description')}
           </Typography>
         </MuiThemeProvider>
         <Grid container spacing={5} className="grid-container">

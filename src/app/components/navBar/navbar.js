@@ -132,9 +132,9 @@ const NavBar = (props) => {
             </li>
             <li className="navbar__item">
               <a
-                data-page="media"
+                data-page="video"
                 className="navbar__item--link scroll"
-                href="#media"
+                href="#video"
               >
                 {t('navBar.video')}
               </a>

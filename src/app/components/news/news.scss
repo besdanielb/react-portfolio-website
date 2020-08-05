@@ -21,7 +21,7 @@ section#news {
         overflow: hidden;
 
         .image-container {
-            height: 65vh;
+            height: 60vh;
             width: 400px;
             position: relative;
             cursor: pointer;
@@ -41,8 +41,15 @@ section#news {
             font-weight: bold;
         }
 
+        .description {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 1rem;
+            text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+        }
+
         .image {
-            height: 65vh;
+            height: 60vh;
             width: 400px;
             border-radius: 6px;
             box-shadow: 0px 20px 65px rgba(0, 0, 0, 0.3);
@@ -96,6 +103,9 @@ section#news {
         .container {
             .title {
                 margin-top: 1rem;
+            }
+
+            .description {
                 margin-bottom: 3rem;
             }
 
@@ -142,11 +152,6 @@ section#news {
 @media only screen and (max-width: 768px) {
     section#news {
         .container {
-            .title {
-                margin-top: 1rem;
-                margin-bottom: 3rem;
-            }
-
             overflow-y: scroll;
 
             .image-container {
@@ -173,7 +178,7 @@ section#news {
                     left: 15%;
                     opacity: 1;
                     visibility: visible;
-                    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+                    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 
                     &__title {
                         bottom: 20%;
@@ -198,10 +203,6 @@ section#news {
 
 @media only screen and (max-width: 450px) {
     section#news {
-        .title {
-            margin-bottom: 2rem;
-        }
-
         .container {
             .image-container {
                 height: 85%;
@@ -223,10 +224,12 @@ section#news {
                 width: 100%;
                 &--description {
                     height: 85%;
+                    width: 100%;
                     top: 0%;
+                    left: 0%;
                     opacity: 1;
                     visibility: visible;
-                    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+                    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 
                     &__title {
                         bottom: 20%;

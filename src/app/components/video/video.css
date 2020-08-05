@@ -1,4 +1,4 @@
-section#media {
+section#video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,7 +13,7 @@ section#media {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url("../../images/videoBackground.webp") no-repeat center center/cover;
 }
 
-section#media .title {
+section#video .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,10 +22,17 @@ section#media .title {
           justify-content: center;
   font-weight: bold;
   margin-top: 2.5rem;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
-section#media .grid-container {
+section#video .description {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+section#video .grid-container {
   padding: 3vw;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -33,20 +40,20 @@ section#media .grid-container {
   height: 85%;
 }
 
-section#media .video-container {
+section#video .video-container {
   margin-bottom: 3rem;
   margin-top: 1rem;
 }
 
-section#media .video-player {
+section#video .video-player {
   height: 100% !important;
   width: 80% !important;
 }
 
-section#media .container {
+section#video .container {
   margin-top: 3.9rem;
   height: calc(100vh - 3.9rem);
-  overflow-y: auto;
+  overflow-y: hidden;
   width: 100%;
 }
 
@@ -61,6 +68,9 @@ section#media .container {
 }
 
 @media only screen and (max-width: 960px) {
+  section#media .container {
+    overflow-y: auto;
+  }
   section#media .video-player {
     width: 100% !important;
     height: 70% !important;

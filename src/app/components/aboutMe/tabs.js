@@ -94,60 +94,58 @@ const FullWidthTabs = (props) => {
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
           <Typography variant={'body1'} className="bold">
-            Music Composition
+            {t('aboutMeTab.skills.info1.title')}
           </Typography>
           <Typography variant={'body2'} paragraph>
-            Im actually super good, you have no idea
+            {t('aboutMeTab.skills.info1.description')}
           </Typography>
           <Typography variant={'body1'} className="bold">
-            Chatear o peeps
+            {t('aboutMeTab.skills.info2.title')}
           </Typography>
           <Typography variant={'body2'} paragraph>
-            Isto é o que eu gosto mais de fazer
+            {t('aboutMeTab.skills.info2.description')}
           </Typography>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <Typography variant={'body1'} className="bold">
-            Experience? Nice meme bro
+            {t('aboutMeTab.exp.info1.title')}
           </Typography>
           <Typography variant={'body2'} paragraph>
-            Are you dumb, stupid or dumb?
+            {t('aboutMeTab.exp.info1.description')}
           </Typography>
           <Typography variant={'body1'} className="bold">
-            Chatear o peeps
+            {t('aboutMeTab.exp.info2.title')}
           </Typography>
           <Typography variant={'body2'} paragraph>
-            Isto é o que eu gosto mais de fazer
+            {t('aboutMeTab.exp.info2.description')}
           </Typography>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           <Typography variant={'body1'} className="bold">
-            Grande ESMAE (07/08/1996 - 01/02/2039)
+            {t('aboutMeTab.educ.info1.title')}
           </Typography>
           <Typography variant={'body2'} paragraph>
-            Podia ter ido para Aveiro que é melhor, mas era longe e não me
-            deixam andar sozinha
+            {t('aboutMeTab.educ.info1.description')}
           </Typography>
           <Typography variant={'body1'} className="bold">
-            Chatear o peeps
+            {t('aboutMeTab.educ.info2.title')}
           </Typography>
           <Typography variant={'body2'} paragraph>
-            Isto é o que eu gosto mais de fazer
+            {t('aboutMeTab.educ.info2.description')}
           </Typography>
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
           <Typography variant={'body1'} className="bold">
-            Grande ESMAE (07/08/1996 - 01/02/2039)
+            {t('aboutMeTab.awards.info1.title')}
           </Typography>
           <Typography variant={'body2'} paragraph>
-            Podia ter ido para Aveiro que é melhor, mas era longe e não me
-            deixam andar sozinha
+            {t('aboutMeTab.awards.info1.description')}
           </Typography>
           <Typography variant={'body1'} className="bold">
-            Chatear o peeps
+            {t('aboutMeTab.awards.info2.title')}
           </Typography>
           <Typography variant={'body2'} paragraph>
-            Isto é o que eu gosto mais de fazer
+            {t('aboutMeTab.awards.info2.description')}
           </Typography>
         </TabPanel>
       </SwipeableViews>

@@ -31,6 +31,9 @@ const News = (props) => {
               <Typography variant="h2" className="title">
                 {t('news.title')}
               </Typography>
+              <Typography variant="body1" className="description">
+                {t('news.description')}
+              </Typography>
             </Grid>
             <Grid item xs={12} md={6} lg={4} align="center">
               {/* You can add your external links to the news in the href property */}
@@ -50,13 +53,13 @@ const News = (props) => {
                       variant="h5"
                       className="image--description__title"
                     >
-                      Next event September 12th 2020
+                      {t('news.tab1.title')}
                     </Typography>
                     <Typography
                       variant="body2"
                       className="image--description__description"
                     >
-                      This thing is gonna be really nice, just wait and see!
+                      {t('news.tab1.description')}
                     </Typography>
                     <InfoIcon className="image--description__icon" />
                   </div>
@@ -80,13 +83,13 @@ const News = (props) => {
                       variant="h5"
                       className="image--description__title"
                     >
-                      Next event September 12th 2020
+                      {t('news.tab2.title')}
                     </Typography>
                     <Typography
                       variant="body2"
                       className="image--description__description"
                     >
-                      This thing is gonna be really nice, just wait and see!
+                      {t('news.tab2.description')}
                     </Typography>
                     <InfoIcon className="image--description__icon" />
                   </div>
@@ -110,13 +113,13 @@ const News = (props) => {
                       variant="h5"
                       className="image--description__title"
                     >
-                      Next event September 12th 2020
+                      {t('news.tab3.title')}
                     </Typography>
                     <Typography
                       variant="body2"
                       className="image--description__description"
                     >
-                      This thing is gonna be really nice, just wait and see!
+                      {t('news.tab3.description')}
                     </Typography>
                     <InfoIcon className="image--description__icon" />
                   </div>
