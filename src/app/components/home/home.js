@@ -24,6 +24,25 @@ const Home = (props) => {
         <Typography variant="h1">{t('home.name')}</Typography>
         <Typography variant="h4">{t('home.description')}</Typography>
       </MuiThemeProvider>
+      {/* You can remove this */}
+      <span className="photo-credits">
+        Photo by
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://unsplash.com/@sarahdorweiler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >
+          Sarah Dorweiler
+        </a>
+        on
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://unsplash.com/s/photos/plant?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+        >
+          Unsplash
+        </a>
+      </span>
     </section>
   )
 }

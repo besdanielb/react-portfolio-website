@@ -1,8 +1,10 @@
 /* eslint-disable quote-props */
-import bookImage from '../../images/book.webp'
-import plantImage from '../../images/plant.webp'
-import tableImage from '../../images/table.webp'
-import workStuffImage from '../../images/work-stuff.webp'
+
+// Use jpg images for better browser support (if you dont use Safari you can use Webp)
+import bookImage from '../../images/book.jpg'
+import plantImage from '../../images/plant.jpg'
+import tableImage from '../../images/table.jpg'
+import workStuffImage from '../../images/work-stuff.jpg'
 
 /**
  * Replace this array details with your images path and title,

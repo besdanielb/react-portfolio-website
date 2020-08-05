@@ -20,6 +20,10 @@ section#contacts {
     url("../../images/table.webp") no-repeat center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
     url("../../images/table.webp") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.3))),
+    url("../../images/table.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+    url("../../images/table.jpg") no-repeat center center/cover;
 }
 
 section#contacts .MuiButton-root {

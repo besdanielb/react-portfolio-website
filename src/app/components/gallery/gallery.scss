@@ -9,6 +9,8 @@ section#gallery {
     // Photo by Shapelined on Unsplash
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
         url("../../images/shapes.webp") no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+        url("../../images/shapes.jpg") no-repeat center center/cover;
 
     .alice-carousel {
         width: 90%;

@@ -9,6 +9,8 @@ section#aboutMe {
     scroll-snap-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
         url("../../images/book.webp") no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+        url("../../images/book.jpg") no-repeat center center/cover;
 
     // About me tabs
     .appbar-root {

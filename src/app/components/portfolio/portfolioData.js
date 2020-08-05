@@ -1,5 +1,6 @@
-import plantImage from '../../images/plant.webp'
-import tableImage from '../../images/table.webp'
+// Use jpg images for better browser support (if you dont use Safari you can use Webp)
+import plantImage from '../../images/plant.jpg'
+import tableImage from '../../images/table.jpg'
 
 /**
  * Portfolio info

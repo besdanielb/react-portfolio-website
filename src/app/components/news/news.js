@@ -10,9 +10,12 @@ import {
   responsiveFontSizes,
 } from '@material-ui/core/styles'
 import InfoIcon from '@material-ui/icons/Info'
-import firstNewsImage from '../../images/people.webp'
-import secondNewsImage from '../../images/jumping.webp'
-import thirdNewsImage from '../../images/concert.webp'
+import firstNewsImageWebp from '../../images/people.webp'
+import firstNewsImageJpg from '../../images/people.jpg'
+import secondNewsImageWebp from '../../images/jumping.webp'
+import secondNewsImageJpg from '../../images/jumping.jpg'
+import thirdNewsImageWebp from '../../images/concert.webp'
+import thirdNewsImageJpg from '../../images/concert.jpg'
 
 let theme = createMuiTheme()
 theme = responsiveFontSizes(theme)
@@ -43,11 +46,14 @@ const News = (props) => {
                   rel="noopener noreferrer"
                   href="http://www.google.com"
                 >
-                  <img
-                    src={firstNewsImage}
-                    className="image"
-                    alt="first news"
-                  />
+                  <picture>
+                    <source src={firstNewsImageWebp}></source>
+                    <img
+                      src={firstNewsImageJpg}
+                      className="image"
+                      alt="first news"
+                    />
+                  </picture>
                   <div className="image--description">
                     <Typography
                       variant="h5"
@@ -73,11 +79,14 @@ const News = (props) => {
                   rel="noopener noreferrer"
                   href="http://www.google.com"
                 >
-                  <img
-                    src={secondNewsImage}
-                    className="image"
-                    alt="second news"
-                  />
+                  <picture>
+                    <source src={secondNewsImageWebp}></source>
+                    <img
+                      src={secondNewsImageJpg}
+                      className="image"
+                      alt="second news"
+                    />
+                  </picture>
                   <div className="image--description">
                     <Typography
                       variant="h5"
@@ -103,11 +112,14 @@ const News = (props) => {
                   rel="noopener noreferrer"
                   href="http://www.google.com"
                 >
-                  <img
-                    src={thirdNewsImage}
-                    className="image"
-                    alt="third news"
-                  />
+                  <picture>
+                    <source src={thirdNewsImageWebp}></source>
+                    <img
+                      src={thirdNewsImageJpg}
+                      className="image"
+                      alt="third news"
+                    />
+                  </picture>
                   <div className="image--description">
                     <Typography
                       variant="h5"

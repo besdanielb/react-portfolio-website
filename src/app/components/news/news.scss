@@ -10,6 +10,8 @@ section#news {
     //Photo by Steve Johnson on Unsplash
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
         url("../../images/news.webp") no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+        url("../../images/news.jpg") no-repeat center center/cover;
     text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
 
     .container {

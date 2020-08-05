@@ -17,6 +17,8 @@ section#home {
   scroll-snap-align: center;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.1))), url("../../images/plant.webp") no-repeat center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../../images/plant.webp") no-repeat center center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.1))), url("../../images/plant.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("../../images/plant.jpg") no-repeat center center/cover;
   text-shadow: 1px 1px 1px black;
 }
 
@@ -34,6 +36,20 @@ section#home .MuiTypography-h4 {
 
 section#home .MuiTypography-h3 {
   letter-spacing: 0.5rem;
+}
+
+section#home .photo-credits {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+section#home .photo-credits a {
+  text-decoration: none;
+  color: skyblue;
 }
 
 @media only screen and (max-width: 960px) {

@@ -12,7 +12,8 @@ import {
 } from '@material-ui/core/styles'
 import GetAppIcon from '@material-ui/icons/GetApp'
 // Profile picture import path
-import image from '../../images/portrait.webp'
+import imageWebp from '../../images/portrait.webp'
+import imageJpg from '../../images/portrait.jpg'
 
 import FullWidthTabs from './tabs'
 
@@ -41,12 +42,15 @@ const AboutMe = (props) => {
                 {/* Your Profile picture */}
                 <Grid item align="center">
                   {/* Photo by Hunter Newton on Unsplash */}
-                  <img
-                    src={image}
-                    alt="looking at computer"
-                    className="image"
-                    viewBox="0 0 420 580"
-                  />
+                  <picture>
+                    <source src={imageWebp} />
+                    <img
+                      src={imageJpg}
+                      alt="looking at computer"
+                      className="image"
+                      viewBox="0 0 420 580"
+                    />
+                  </picture>
                 </Grid>
                 <Grid
                   item
