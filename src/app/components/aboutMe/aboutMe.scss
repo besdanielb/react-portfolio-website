@@ -187,7 +187,7 @@ section#aboutMe {
     }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (max-height: 500px) and (orientation: landscape) {
     section#aboutMe {
         .title {
             margin-top: 0rem;

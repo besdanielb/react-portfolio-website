@@ -180,16 +180,16 @@ const Contacts = (props) => {
                       paragraph
                       className="my-info__items--content--text"
                     >
-                      {/* Your email address */}
-                      olvia.silva@gmail.com
+                      {/* Your first email address */}
+                      first-email@gmail.com
                     </Typography>
                     <Typography
                       variant="body1"
                       paragraph
                       className="my-info__items--content--text"
                     >
-                      {/* Your email address */}
-                      trabalhasemuito@hotmail.com
+                      {/* Your second email address */}
+                      second-email@gmail.com
                     </Typography>
                   </div>
                 </div>
@@ -203,16 +203,16 @@ const Contacts = (props) => {
                       paragraph
                       className="my-info__items--content--text"
                     >
-                      {/* Your phone number */}
-                      +351 915 565 489
+                      {/* Your first phone number */}
+                      +351 999 999 999
                     </Typography>
                     <Typography
                       variant="body1"
                       paragraph
                       className="my-info__items--content--text"
                     >
-                      {/* Your phone number */}
-                      +351 225 456 654
+                      {/* Your second phone number */}
+                      +351 222 222 222
                     </Typography>
                   </div>
                 </div>

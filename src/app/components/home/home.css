@@ -39,7 +39,9 @@ section#home .MuiTypography-h3 {
 }
 
 section#home .photo-credits {
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   bottom: 0;
   left: 0;
   font-size: 12px;
