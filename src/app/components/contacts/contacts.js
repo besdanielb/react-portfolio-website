@@ -75,7 +75,7 @@ const Contacts = (props) => {
         'gmail', // Emailjs service ID,
         'template_drzSGLuL', // Emailjs template id,
         'form',
-        'user_MbCahBypCSJ1Phr6g23Jw', // Emailjs user id (go to Account, then Api keys and grab the User ID)
+        'user_ID', // Emailjs user id (go to Account, then Api keys and grab the User ID)
       )
       .then()
       .catch()
