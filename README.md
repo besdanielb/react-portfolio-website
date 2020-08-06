@@ -2,7 +2,7 @@
 
 This portfolio template was made using ReactJS version 16 and MaterialUI components, such as Grid and Typography. <br/> <br/>
 The goal of this portfolio is to be as clean as possible, with the least amount of text and more image focused, which can make the website look more modern and with a minimal design. <br/><br/>
-There's a demo deployed version available at: `https://musing-jones-42c2fb.netlify.app/` <br/><br/>
+There's a demo deployed version available in [this url](https://musing-jones-42c2fb.netlify.app/) <br/><br/>
 
 ## Template Customisation
 
@@ -31,7 +31,9 @@ To add a new language you need to:
 * Open the `src/i18n.js` file, import the translations file you created and update the resources object with the new imported translation file. Here you can also change the default language, by changing the `fallbackLng` property;
 * Now, the new translations will be available on all the components. You just need to update the Languages split button on the navigation bar to have the new language available. For that, go to the `navBar` component, find the `getCurrentLanguageLabel` function and add a new if statement for the new language. The return of this function is the label that is going to show on the button when the language is selected. Next, find the div `<div className="language-button-container">` and add a new `<MenuItem>` element with your language. This will add a new button on the dropdown and change the language when the user clicks on it, by calling the `changeLanguage(lang)` function.
 
+## Support
 
+If you need help with anything else, feel free to send me an email at:  `besdanielb@gmail.com`
 
 ## Available Scripts
 
