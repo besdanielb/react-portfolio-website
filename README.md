@@ -35,6 +35,10 @@ To add a new language you need to:
 * Open the `src/i18n.js` file, import the translations file you created and update the resources object with the new imported translation file. Here you can also change the default language, by changing the `fallbackLng` property;
 * Now, the new translations will be available on all the components. You just need to update the Languages split button on the navigation bar to have the new language available. For that, go to the `navBar` component, find the `getCurrentLanguageLabel` function and add a new if statement for the new language. The return of this function is the label that is going to show on the button when the language is selected. Next, find the div `<div className="language-button-container">` and add a new `<MenuItem>` element with your language. This will add a new button on the dropdown and change the language when the user clicks on it, by calling the `changeLanguage(lang)` function.
 
+### Contact Me Form
+
+The Contact Me form uses [Email JS](https://www.emailjs.com/docs/tutorial/overview/) service for easier integration and costumization of the email service. You can follow EmailJS tutorial on how to use their service on the link above. It's simple and easy to use, you just need to create a free EmailJS account and edit the email template as you like, then, copy your user_id and template_id to the `emailjs.sendEmail()` function on the contacts.js file.
+
 ### Code formatting
 
 The code was formatted using ESLint and Prettier. Some ESlint configs can be found on the `.eslint.js` file on the `src/` directory.
